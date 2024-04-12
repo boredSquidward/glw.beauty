@@ -1,12 +1,16 @@
+import { Suspense } from "react";
+import { RouterProvider } from "react-router-dom";
+
+import FallBack from "./components/fallback/Fallback";
+import { router } from "./core/router/router";
 import "./App.css";
-import { Home } from "./components/pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Home />
-      </header>
+      <Suspense fallback={<FallBack />}>
+        <RouterProvider router={router} />
+      </Suspense>
     </div>
   );
 }

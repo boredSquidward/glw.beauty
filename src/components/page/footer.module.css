@@ -1,0 +1,20 @@
+.Footer {
+  /* background: #222; */
+  background-color: hsla(calc(0 + 215), calc(0% + 20%), calc(20% - 2%), 100%);
+  width: 100%;
+  color: #fff;
+}
+
+.columns > div {
+  border-bottom: 1px solid #fff;
+}
+
+.columns:nth-last-child() {
+  border: 0;
+  height: 20vh;
+}
+
+.delivery {
+  color: lightgreen;
+  font-size: small;
+}
