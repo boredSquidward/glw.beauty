@@ -1,13 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
-import Page from "../scaffold/Scaffold";
 import styles from "./notFound.module.css";
-import { Link } from "react-router-dom";
+import Scaffold from "../scaffold/Scaffold";
+import { appRoutes } from "../../core/constants/routes";
 
 const NotFound = () => {
-  const home = "/";
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -15,7 +14,7 @@ const NotFound = () => {
   };
 
   return (
-    <Page>
+    <Scaffold>
       <Container className="my-5 text-center">
         <h1 className={styles.emoji}>☹️</h1>
         <h1 className={styles.error}>404</h1>
@@ -31,14 +30,14 @@ const NotFound = () => {
           or head over to{" "}
           <Link
             className="link link-light link-underline-primary link-offset-1"
-            to={home}
+            to={appRoutes.homePath}
           >
             home page
           </Link>{" "}
           to choose a new direction.
         </p>
       </Container>
-    </Page>
+    </Scaffold>
   );
 };
 

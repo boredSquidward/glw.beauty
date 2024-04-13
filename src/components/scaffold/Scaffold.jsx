@@ -1,7 +1,7 @@
 import React from "react";
 
 import Navbar from "../navbar/Navbar";
-import Footer from "../fallback/Footer";
+import Footer from "../footer/Footer";
 
 const Scaffold = ({ children }) => {
   return (

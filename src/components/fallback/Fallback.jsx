@@ -1,17 +1,14 @@
 import Spinner from "react-bootstrap/Spinner";
-import { Container } from "react-bootstrap";
 
 import styles from "./fallBack.module.css";
 
 const FallBack = () => (
-  <Container
-    className={`${styles.container} d-flex flex-column align-items-center justify-content-center`}
-  >
+  <div className={styles.container}>
     <Spinner animation="grow" variant="light" />
-    <h2 className={styles.header}>
+    <h2>
       <div>Please wait...</div>
     </h2>
-  </Container>
+  </div>
 );
 
 export default FallBack;
