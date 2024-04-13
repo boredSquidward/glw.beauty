@@ -1,9 +1,9 @@
 import React from "react";
 
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../navbar/Navbar";
+import Footer from "../fallback/Footer";
 
-const Page = ({ children }) => {
+const Scaffold = ({ children }) => {
   return (
     <div className="d-flex flex-column justify-content-between h-100">
       <Navbar />
@@ -13,4 +13,4 @@ const Page = ({ children }) => {
   );
 };
 
-export default Page;
+export default Scaffold;

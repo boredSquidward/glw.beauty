@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./home.module.css";
-import Page from "../page/Page";
+import Scaffold from "../../scaffold/Scaffold";
 
 const Home = () => {
   return (
-    <Page>
+    <Scaffold>
       <div className={`${styles.home}`}>home</div>
-    </Page>
+    </Scaffold>
   );
 };
 

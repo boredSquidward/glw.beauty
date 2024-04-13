@@ -1,50 +1,42 @@
 import { createHashRouter } from "react-router-dom";
 import { lazy } from "react";
+import { appRoutes } from "../constants/routes.js";
 
-// import { Home } from "../../components/pages/Home";
-const Home = lazy(() => import("../../components/pages/Home.jsx"));
-// const Login = lazy(() => import("../login/LoginPage"));
-// const Menu = lazy(() => import("../menu/MenuPage"));
-// const Products = lazy(() => import("../menu/Products"));
+const Home = lazy(() => import("../../components/pages/home/Home.jsx"));
+const Services = lazy(() =>
+  import("../../components/pages/services/Services.jsx")
+);
+const AboutUs = lazy(() =>
+  import("../../components/pages/about-us/AboutUs.jsx")
+);
 const NotFound = lazy(() => import("../../components/notFound/NotFound.jsx"));
-// const Awards = lazy(() => import("../awards/Awards"));
-// const About = lazy(() => import("../about/About"));
-
-const homePath = "/";
-// const loginApi = process.env.REACT_APP_ADMIN_API;
-// const menuApi = process.env.REACT_APP_MENU_API;
-// const productsApi = process.env.REACT_APP_PRODUCT_API;
-// const awardsApi = process.env.REACT_APP_AWARDS_API;
-// const aboutApi = process.env.REACT_APP_ABOUT_API;
+const ContactUs = lazy(() =>
+  import("../../components/pages/contact-us/ContactUs.jsx")
+);
 
 const routes = [
   {
-    path: homePath,
+    path: appRoutes.homePath,
     element: <Home />,
     errorElement: <NotFound />,
   },
-  // {
-  //   path: loginApi,
-  //   element: <Login />,
-  // },
-  // {
-  //   path: awardsApi,
-  //   element: <Awards />,
-  // },
-  // {
-  //   path: aboutApi,
-  //   element: <About />,
-  // },
-  // {
-  //   path: menuApi,
-  //   element: <Menu />,
-  // },
-  // {
-  //   path: productsApi,
-  //   element: <Products />,
-  // },
+  {
+    path: appRoutes.servicesPath,
+    element: <Services />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: appRoutes.aboutUsPath,
+    element: <AboutUs />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: appRoutes.contactUsPath,
+    element: <ContactUs />,
+    errorElement: <NotFound />,
+  },
 ];
 
 export const router = createHashRouter(routes, {
-  basename: homePath,
+  basename: appRoutes.homePath,
 });

@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-import Page from "../page/Page";
+import Page from "../scaffold/Scaffold";
 import styles from "./notFound.module.css";
 import { Link } from "react-router-dom";
 
