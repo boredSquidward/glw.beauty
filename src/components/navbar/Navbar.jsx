@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 import Logo from "../../assets/images/logo.png";
 import { appRoutes } from "../../core/constants/routes";
-import styles from "./navbar.module.css";
 
 function Navbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -12,12 +11,12 @@ function Navbar() {
   const classNameHandler = (path) => {
     if (location.pathname === path) {
       return windowWidth >= 640
-        ? "bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
-        : "bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium";
+        ? "bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium font-sans"
+        : "bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium font-sans";
     } else {
       return windowWidth >= 640
-        ? "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-        : "text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium";
+        ? "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium font-sans"
+        : "text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium font-sans";
     }
   };
 
@@ -34,7 +33,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`${styles.nav} bg-gray-800`}>
+    <nav className="bg-black sm:fixed w-screen">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-20 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
