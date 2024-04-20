@@ -40,10 +40,10 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-black sm:fixed w-screen">
+    <nav className="bg-black fixed w-screen">
       <div className="mx-auto w-screen px-2 sm:px-6 lg:px-8">
         <div className="relative flex 2xl:h-36 h-20 items-center justify-between">
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+          <div className="flex flex-1 items-center justify-between">
             <Link
               className="flex flex-shrink-0 items-center"
               to={appRoutes.homePath}
@@ -54,6 +54,21 @@ function Navbar() {
                 src={Logo}
               />
             </Link>
+            <div className="sm:hidden">
+              <Disclosure>
+                <Disclosure.Button
+                  onClick={clickHandler}
+                  className="p-2 mb-2 relative inline-flex items-center justify-center rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                >
+                  <span className="absolute -inset-0.5" />
+                  {isDropdownOpen ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </Disclosure>
+            </div>
             <div className="hidden sm:ml-6 sm:flex items-center">
               <div className="flex space-x-4">
                 <Link
@@ -86,21 +101,6 @@ function Navbar() {
         </div>
       </div>
       <div className="sm:hidden" id="mobile-menu">
-        <div className="felx flex-row-reverse items-center justify-center w-screen px-2">
-          <Disclosure>
-            <Disclosure.Button
-              onClick={clickHandler}
-              className="p-2 mb-2 relative inline-flex items-center justify-center rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            >
-              <span className="absolute -inset-0.5" />
-              {isDropdownOpen ? (
-                <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </Disclosure.Button>
-          </Disclosure>
-        </div>
         <div
           className={`${
             isDropdownOpen ? "" : "hidden"
