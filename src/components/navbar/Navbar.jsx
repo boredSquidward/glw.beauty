@@ -40,7 +40,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-black fixed w-screen">
+    <nav className="bg-black absolute top-0 w-screen">
       <div className="mx-auto w-screen px-2 sm:px-6 lg:px-8">
         <div className="relative flex 2xl:h-36 h-20 items-center justify-between">
           <div className="flex flex-1 items-center justify-between">
