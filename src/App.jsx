@@ -7,7 +7,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App font-sans">
+    <div className="App font-sans cursor-default">
       <Suspense fallback={<FallBack />}>
         <RouterProvider router={router} />
       </Suspense>
