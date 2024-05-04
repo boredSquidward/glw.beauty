@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="pt-10 2xl:pt-16 text-xs 2xl:text-2xl text-center">
-        © Copyright 2012 - ${year} | Glisten Wellness | All Rights Reserved
+        © Copyright 2012 - {year} | Glisten Wellness | All Rights Reserved
       </div>
     </footer>
   );

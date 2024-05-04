@@ -1,0 +1,11 @@
+.hide {
+  transform: translateX(-100px);
+  transition: 300ms;
+  opacity: 0.3;
+}
+
+.show {
+  background: #000;
+  transform: translateX(100px);
+  opacity: 1;
+}
