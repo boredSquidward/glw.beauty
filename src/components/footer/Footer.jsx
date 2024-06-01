@@ -28,7 +28,7 @@ const Footer = () => {
             className=" w-32 2xl:w-72 h-auto"
             loading="lazy"
           />
-          <h4 className="text-xs 2xl:text-2xl font-bold">Skin Care & Beauty</h4>
+          <h1 className="text-xs 2xl:text-2xl font-bold">Skin Care & Beauty</h1>
           <p className="p-3 2xl:p-10 text-center text-sm 2xl:text-3xl">
             8240 Preston Rd Suite 200 Room 138 Plano 75024, TX 75024, United
             States
