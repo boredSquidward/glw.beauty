@@ -4,7 +4,7 @@ import PriscillaCarlos from "../../../assets/images/Priscilla-Carlos.png";
 import ShaniBefore from "../../../assets/images/shani-before.avif";
 import ShaniAfter from "../../../assets/images/shani-after.avif";
 
-export const Reviews = () => {
+export const ReviewsSection = () => {
   const width = window.innerWidth;
   return (
     <div

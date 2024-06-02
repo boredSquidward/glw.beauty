@@ -5,6 +5,8 @@ import Laser from "../../../assets/images/laser.avif";
 import Facial from "../../../assets/images/facial.avif";
 import Derma from "../../../assets/images/derma.avif";
 import { appRoutes } from "../../../core/constants/routes";
+// import LazyImage from "../../utils/LazyImage";
+// import HashedLaser from "../../../assets/hashed/laser.png";
 
 export const ServicesSection = () => {
   const width = window.innerWidth;
@@ -25,6 +27,12 @@ export const ServicesSection = () => {
             to={`${appRoutes.servicesPath}#hair-removal`}
             className={`${styles.second_section_item} transition rounded-2xl cursor-pointer hover:scale-105 ease-in-out`}
           >
+            {/* <LazyImage
+              bg={HashedLaser}
+              alt={"laser"}
+              img={Laser}
+              className={"w-66 h-66 object-cover"}
+            /> */}
             <img
               src={Laser}
               loading="lazy"
@@ -36,6 +44,12 @@ export const ServicesSection = () => {
             to={`${appRoutes.servicesPath}#derma-frac`}
             className={`${styles.second_section_item} transition ease-linear cursor-pointer hover:scale-105`}
           >
+            {/* <LazyImage
+              bg={Derma}
+              alt={"Derma"}
+              img={Derma}
+              className={"w-full h-66 "}
+            /> */}
             <img
               src={Derma}
               loading="lazy"
@@ -45,8 +59,14 @@ export const ServicesSection = () => {
           </Link>
           <Link
             to={`${appRoutes.servicesPath}#hydra-facial`}
-            className={`${styles.second_section_item} transition  ease-linear cursor-pointer hover:scale-105`}
+            className={`${styles.second_section_item} transition ease-linear cursor-pointer hover:scale-105`}
           >
+            {/* <LazyImage
+              bg={Facial}
+              alt={"Facial"}
+              img={Facial}
+              className={"w-full h-66 "}
+            /> */}
             <img
               src={Facial}
               loading="lazy"

@@ -1,12 +1,13 @@
 import React from "react";
 
 import Scaffold from "../../scaffold/Scaffold";
-import styles from "./aboutUs.module.css";
 
 const AboutUs = () => {
   return (
     <Scaffold>
-      <div className={styles.about_us}>AboutUs</div>
+      <div className="h-screen flex justify-center items-center">
+        This page is under development
+      </div>
     </Scaffold>
   );
 };

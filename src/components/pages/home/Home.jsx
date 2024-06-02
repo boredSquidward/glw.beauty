@@ -1,18 +1,17 @@
 import React from "react";
 
-import Scaffold from "../../scaffold/Scaffold";
-
-import { ServicesSection } from "./ServicesSection";
-import { Reviews } from "./ReviewsSection";
 import { TopSection } from "./TopSection";
+import Scaffold from "../../scaffold/Scaffold";
+import { ServicesSection } from "./ServicesSection";
+import { ReviewsSection } from "./ReviewsSection";
 
 const Home = () => {
   return (
     <Scaffold>
       <TopSection />
-      <div className={`h-screen bg-white`}></div>
+      {/* <div className={`h-screen bg-white`}></div> */}
       <ServicesSection />
-      <Reviews />
+      <ReviewsSection />
     </Scaffold>
   );
 };
