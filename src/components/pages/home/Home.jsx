@@ -9,7 +9,9 @@ const Home = () => {
   return (
     <Scaffold>
       <TopSection />
-      {/* <div className={`h-screen bg-white`}></div> */}
+      <div className={`h-screen bg-white flex justify-center items-center`}>
+        <p>Your video goes here</p>
+      </div>
       <ServicesSection />
       <ReviewsSection />
     </Scaffold>
