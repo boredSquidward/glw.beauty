@@ -1,18 +1,21 @@
 import { HashLink as Link } from "react-router-hash-link";
+import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 
-import styles from "./home.module.css";
 import { appRoutes } from "../../../core/constants/routes";
 import HairReduction from "../../../assets/images/Story-6.avif";
 import SkinCare from "../../../assets/images/Story-3.avif";
 import Hydra from "../../../assets/images/Story-2.avif";
+import styles from "./home.module.css";
 
 export const ServicesSection = () => {
   const [isLaserRemovalLoaded, setIsLaserRemovalLoaded] = useState(false);
   const [isFacialLoaded, setIsFacialLoaded] = useState(false);
   const [isDermaLoaded, setIsDermaLoaded] = useState(false);
 
-  const width = window.innerWidth;
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
 
   return (
     <div className="sm:min-h-screen p-5 bg-black flex flex-col justify-between">
@@ -27,7 +30,12 @@ export const ServicesSection = () => {
           Our Special Services
         </h1>
       </div>
-      <div className="pt-5 flex justify-center">
+      <div
+        className={`${
+          inView ? styles.show_1 : styles.hide_1
+        } pt-5 flex justify-center`}
+        ref={ref}
+      >
         <div className="flex flex-col md:flex-row justify-around">
           <ServiceItem
             to={`${appRoutes.servicesPath}#hair-removal`}
@@ -36,7 +44,6 @@ export const ServicesSection = () => {
             title={"Laser Hair Removal"}
             bg={"bg-story-6"}
             img={HairReduction}
-            width={width}
             content={`Laser hair removal offers a long-lasting solution by targeting hair
       follicles. It's safe, effective, and virtually painless for all skin types
       providing smooth skin. The procedure is quick, with minimal side effects,
@@ -51,7 +58,6 @@ export const ServicesSection = () => {
             className={"md:mx-5"}
             bg={"bg-story-3"}
             img={SkinCare}
-            width={width}
             content={`Dermafrac Micro-channeling or micro-needling, is an advanced
               cosmetic procedure targeting skin concerns. It gently punctures
               the skin's surface layers with fine needles, stimulating collagen
@@ -65,7 +71,6 @@ export const ServicesSection = () => {
             title={"Hydra-Facial"}
             bg={"bg-story-2"}
             img={Hydra}
-            width={width}
             content={`Achieve radiant skin with advanced facial treatments. Hydrafacial,
               a rising trend, offers a solution for smooth, luminous skin. It
               involves cleansing, exfoliation, extraction, and rejuvenating

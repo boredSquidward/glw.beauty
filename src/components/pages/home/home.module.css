@@ -10,7 +10,7 @@
 
 .hide_1,
 .hide_2 {
-  transition: 1000ms;
+  transition: 500ms;
   filter: blur(4px);
   opacity: 0;
 }
@@ -18,7 +18,7 @@
 .show_1,
 .show_2 {
   transform: translateX(0);
-  transition: 2000ms;
+  transition: 500ms;
   opacity: 1;
 }
 
@@ -29,31 +29,3 @@
 .hide_2 {
   transform: translateY(-100px);
 }
-
-/* @media (max-width: 768px) {
-  .service_img {
-    filter: grayscale(100%);
-  }
-
-  .service_img:hover {
-    filter: grayscale(0);
-  }
-} */
-/* 
-@media (max-width: 767px) {
-  .service_item {
-    max-width: 340px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .service_item {
-    width: 30%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .service_item {
-    width: 25%;
-  }
-} */
