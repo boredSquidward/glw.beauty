@@ -113,9 +113,9 @@ const ServiceItem = ({
         />
       </div>
     </Link>
-    <h3 className="text-white pt-5 text-sm lg:text-base xl:text-xl 2xl:text-2xl tracking-tight font-bold text-center">
+    <h1 className="text-white pt-5 text-sm lg:text-base xl:text-xl 2xl:text-2xl tracking-tight font-bold text-center">
       {title}
-    </h3>
+    </h1>
     <p className="text-white text-xs lg:text-sm 2xl:text-xl tracking-tight text-center">
       {content}
     </p>

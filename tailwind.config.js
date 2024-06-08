@@ -21,6 +21,8 @@ module.exports = {
         "story-2": "url('./assets/hashed/hashed-story-2.png')",
         "story-3": "url('./assets/hashed/hashed-story-3.png')",
         "story-6": "url('./assets/hashed/hashed-story-6.png')",
+        "shani-after": "url('./assets/hashed/shani-after.png')",
+        "shani-before": "url('./assets/hashed/shani-before.png')",
       },
     },
   },

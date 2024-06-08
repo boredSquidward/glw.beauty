@@ -3,8 +3,11 @@ import KelleyBlackshear from "../../../assets/images/Kelley-Blackshear.png";
 import PriscillaCarlos from "../../../assets/images/Priscilla-Carlos.png";
 import ShaniBefore from "../../../assets/images/shani-before.avif";
 import ShaniAfter from "../../../assets/images/shani-after.avif";
+import { useState } from "react";
 
 export const ReviewsSection = () => {
+  const [isShaniBeforeLoaded, setIsShaniBeforeLoaded] = useState(false);
+  const [isShaniAfterLoaded, setIsShaniAfterLoaded] = useState(false);
   const width = window.innerWidth;
   return (
     <div
@@ -37,7 +40,7 @@ export const ReviewsSection = () => {
                   className="cursor-pointer"
                 >
                   <div className="relative sm:mt-0 flex items-center gap-x-4 2xl:gap-x-6">
-                    <div className="flex items-center justify-center rounded-full w-10 xl:w-14 2xl:w-24 h-10 xl:h-14 2xl:h-24 bg-blue-600 text-center text-white xl:text-xl 2xl:text-4xl font-medium">
+                    <div className="flex items-center justify-center rounded-full w-10 xl:w-14 2xl:w-24 h-10 xl:h-14 2xl:h-24 bg-slate-900 text-center text-white xl:text-xl 2xl:text-4xl font-medium">
                       S
                     </div>
                     <div className="text-sm leading-6 xl:text-base 2xl:text-2xl">
@@ -54,7 +57,7 @@ export const ReviewsSection = () => {
                   </div>
                 </a>
               </div>
-              <div className="group relative" style={{ width: "92%" }}>
+              <div className="group relative sm:pr-5">
                 <p className="mt-5 text-xs lg:text-sm xl:text-base 2xl:text-xl 2xl:leading-normal 2xl:mt-10 text-justify text-gray-600">
                   EXCELLENT!!!!!!! I get a hydrafacial for my eczema and it is
                   absolutely worth every single cent. Her studio is clean,
@@ -82,26 +85,46 @@ export const ReviewsSection = () => {
               </div>
             </div>
             <div
-              className="flex flex-row w-full sm:w-1/2 justify-between items-center my-10 sm:my-0"
-              style={width >= 768 ? { height: "70vh" } : { height: "70vh" }}
+              className="flex flex-row  sm:w-1/2 justify-between items-center my-10 sm:my-0"
+              style={{ height: "70vh" }}
             >
-              <img
-                src={ShaniBefore}
-                alt="shani-before"
-                className="rounded-xl 2xl:rounded-3xl 2xl:rounded-r-none rounded-r-none w-1/2 h-full object-cover object-left"
-                style={{ width: "49%" }}
-                loading="lazy"
-              />
-              <img
-                src={ShaniAfter}
-                alt="shani-after"
-                className="rounded-xl 2xl:rounded-3xl 2xl:rounded-l-none rounded-l-none w-1/2 h-full object-cover object-left"
-                style={{ width: "49%" }}
-                loading="lazy"
-              />
+              <div
+                className="w-full h-full bg-shani-after bg-no-repeat bg-cover rounded-xl 2xl:rounded-3xl 2xl:rounded-r-none rounded-r-none shadow-lg"
+                style={{
+                  width: "49%",
+                  filter: "grayscale(100%) contrast(130%)",
+                }}
+              >
+                <img
+                  className={`${
+                    isShaniBeforeLoaded ? "opacity-100" : "opacity-0"
+                  } rounded-xl 2xl:rounded-3xl 2xl:rounded-r-none rounded-r-none w-full h-full object-cover object-left transition-opacity`}
+                  onLoad={() => setIsShaniBeforeLoaded(true)}
+                  alt="shani-before"
+                  src={ShaniBefore}
+                  loading="lazy"
+                />
+              </div>
+              <div
+                className="w-full h-full bg-shani-after bg-no-repeat bg-cover rounded-xl 2xl:rounded-3xl 2xl:rounded-l-none rounded-l-none shadow-lg"
+                style={{
+                  width: "49%",
+                  filter: "grayscale(100%)  contrast(130%)",
+                }}
+              >
+                <img
+                  className={`${
+                    isShaniAfterLoaded ? "opacity-100" : "opacity-0"
+                  } rounded-xl 2xl:rounded-3xl 2xl:rounded-l-none rounded-l-none w-full h-full object-cover object-left transition-opacity`}
+                  onLoad={() => setIsShaniAfterLoaded(true)}
+                  alt="shani-after"
+                  src={ShaniAfter}
+                  loading="lazy"
+                />
+              </div>
             </div>
           </article>
-          <div style={{ height: "10vh" }}></div>
+          <div className="h-0 sm:h-10" />
         </div>
         <div className="flex flex-col mx-auto border-t border-gray-200">
           <div className="flex flex-col sm:flex-row justify-between items-start">

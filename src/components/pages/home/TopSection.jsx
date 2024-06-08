@@ -30,7 +30,7 @@ export const TopSection = () => {
       <div
         className={`${
           inView ? styles.show_1 : styles.hide_2
-        } text-white absolute bottom-5 right-0 z-20 pr-5 flex flex-col justify-center`}
+        } text-white absolute bottom-10 right-0 z-20 pr-5 flex flex-col justify-center`}
         ref={ref}
       >
         <h1 className="2xl:text-9xl xl:text-8xl lg:text-6xl sm:text-6xl text-5xl text-end font-medium">
@@ -47,6 +47,7 @@ export const TopSection = () => {
           className="px-10 py-3 text-center text-black 2xl:text-4xl xl:text-2xl text-base font-bold rounded-full bg-white hover:ring-2 hover:ring-blue-500"
           to="https://book.squareup.com/appointments/zt4ca7luehw7ut/location/LZR19TJKEN977/services"
           target="_blank"
+          id="book-now"
         >
           BOOK NOW
         </Link>
