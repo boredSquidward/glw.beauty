@@ -1,9 +1,11 @@
+import { useState } from "react";
+
 import ViannaAndDad from "../../../assets/images/Vianna-and-dad.png";
 import KelleyBlackshear from "../../../assets/images/Kelley-Blackshear.png";
 import PriscillaCarlos from "../../../assets/images/Priscilla-Carlos.png";
 import ShaniBefore from "../../../assets/images/shani-before.avif";
 import ShaniAfter from "../../../assets/images/shani-after.avif";
-import { useState } from "react";
+import styles from "./home.module.css";
 
 export const ReviewsSection = () => {
   const [isShaniBeforeLoaded, setIsShaniBeforeLoaded] = useState(false);
@@ -89,11 +91,8 @@ export const ReviewsSection = () => {
               style={{ height: "70vh" }}
             >
               <div
-                className="w-full h-full bg-shani-after bg-no-repeat bg-cover rounded-xl 2xl:rounded-3xl 2xl:rounded-r-none rounded-r-none shadow-lg"
-                style={{
-                  width: "49%",
-                  filter: "grayscale(100%) contrast(130%)",
-                }}
+                className={`${styles.shani_after} w-full h-full bg-shani-after bg-no-repeat bg-cover rounded-xl 2xl:rounded-3xl 2xl:rounded-r-none rounded-r-none shadow-lg hover:filter-none transition`}
+                style={{ width: "49%" }}
               >
                 <img
                   className={`${
@@ -106,11 +105,8 @@ export const ReviewsSection = () => {
                 />
               </div>
               <div
-                className="w-full h-full bg-shani-after bg-no-repeat bg-cover rounded-xl 2xl:rounded-3xl 2xl:rounded-l-none rounded-l-none shadow-lg"
-                style={{
-                  width: "49%",
-                  filter: "grayscale(100%)  contrast(130%)",
-                }}
+                className={`${styles.shani_before} w-full h-full bg-shani-after bg-no-repeat bg-cover rounded-xl 2xl:rounded-3xl 2xl:rounded-l-none rounded-l-none shadow-lg transition`}
+                style={{ width: "49%" }}
               >
                 <img
                   className={`${

@@ -1,13 +1,3 @@
-@media only screen and (max-width: 639px) {
-  .first_section {
-    background-position: -6rem 0rem;
-  }
-}
-
-.second_section_item {
-  width: 30%;
-}
-
 .hide_1,
 .hide_2 {
   transition: 500ms;
@@ -28,4 +18,14 @@
 
 .hide_2 {
   transform: translateY(-100px);
+}
+
+.shani_before,
+.shani_after {
+  filter: grayscale(100%) contrast(130%);
+}
+
+.shani_before:hover,
+.shani_after:hover {
+  filter: grayscale(0%) contrast(150%);
 }

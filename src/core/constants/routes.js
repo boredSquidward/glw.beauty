@@ -1,6 +1,9 @@
 export const appRoutes = {
   homePath: "/",
-  servicesPath: "/services",
+  // servicesPath: "/services",
   aboutUsPath: "/about-us",
-  contactUsPath: "/contact-us",
+  "hydra-facial": "/services/hydra-facial",
+  "derma-frac": "/services/dermafrac",
+  "laser-hair-removal": "/services/laser-hair-removal",
+  // contactUsPath: "/contact-us",
 };

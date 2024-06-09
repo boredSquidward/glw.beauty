@@ -18,9 +18,9 @@ export const ServicesSection = () => {
   });
 
   return (
-    <div className="sm:min-h-screen p-5 bg-black flex flex-col justify-between">
+    <div className="sm:min-h-screen bg-black flex flex-col justify-around">
       <div
-        className="mx-auto flex flex-col justify-center items-center"
+        className="m-3 mx-auto flex flex-col justify-center items-center"
         style={{ height: "10vh" }}
       >
         <p className="text-sm xl:text-base 2xl:text-xl leading-8 text-white">
@@ -33,7 +33,7 @@ export const ServicesSection = () => {
       <div
         className={`${
           inView ? styles.show_1 : styles.hide_1
-        } pt-5 flex justify-center`}
+        } px-3 flex justify-center`}
         ref={ref}
       >
         <div className="flex flex-col md:flex-row justify-around">
@@ -94,13 +94,13 @@ const ServiceItem = ({
   to,
 }) => (
   <div
-    className={`${className} ${styles.service_item} max-w-80 border-white border-spacing-x-1 transition hover:scale-105 p-5 sm:p-0`}
+    className={`${className} max-w-80 border-white border-spacing-x-1 transition hover:scale-105 sm:p-0`}
     style={{ height: "85vh" }}
   >
-    <Link className={`${styles.second_section_item} cursor-pointer`} to={to}>
+    <Link className="cursor-pointer" to={to}>
       <div
+        className={`${bg} z-50 w-full bg-no-repeat bg-cover rounded-2xl sm:rounded-t-2xl transition overflow-hidden`}
         style={{ height: "60vh" }}
-        className={`${bg} ${styles.service_img} z-50 w-full bg-no-repeat bg-cover rounded-2xl sm:rounded-t-2xl transition overflow-hidden`}
       >
         <img
           className={`${
@@ -113,7 +113,7 @@ const ServiceItem = ({
         />
       </div>
     </Link>
-    <h1 className="text-white pt-5 text-sm lg:text-base xl:text-xl 2xl:text-2xl tracking-tight font-bold text-center">
+    <h1 className="text-white pt-3 text-sm lg:text-base xl:text-xl 2xl:text-2xl tracking-tight font-bold text-center">
       {title}
     </h1>
     <p className="text-white text-xs lg:text-sm 2xl:text-xl tracking-tight text-center">

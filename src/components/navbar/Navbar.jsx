@@ -5,6 +5,7 @@ import Logo from "../../assets/images/logo.png";
 import { appRoutes } from "../../core/constants/routes";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import MyPopover from "./Popover";
 
 function Navbar() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -70,19 +71,20 @@ function Navbar() {
               </Disclosure>
             </div>
             <div className="hidden sm:ml-6 sm:flex items-center">
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 items-center">
                 <Link
                   to={appRoutes.homePath}
                   className={classNameHandler(appRoutes.homePath)}
                 >
                   HOME
                 </Link>
-                <Link
+                <MyPopover />
+                {/* <Link
                   to={appRoutes.servicesPath}
                   className={classNameHandler(appRoutes.servicesPath)}
                 >
                   SERVICES
-                </Link>
+                </Link> */}
                 {/* <Link
                   to={appRoutes.contactUsPath}
                   className={classNameHandler(appRoutes.contactUsPath)}
@@ -100,7 +102,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className="sm:hidden" id="mobile-menu">
+      <div className={`sm:hidden`} id="mobile-menu">
         <div
           className={`${
             isDropdownOpen ? "" : "hidden"
@@ -113,18 +115,19 @@ function Navbar() {
           >
             HOME
           </Link>
-          <Link
+          <MyPopover />
+          {/* <Link
             to={appRoutes.servicesPath}
             className={classNameHandler(appRoutes.servicesPath)}
           >
             SERVICES
-          </Link>
-          <Link
+          </Link> */}
+          {/* <Link
             to={appRoutes.contactUsPath}
             className={classNameHandler(appRoutes.contactUsPath)}
           >
             CONTACT US
-          </Link>
+          </Link> */}
           <Link
             to={appRoutes.aboutUsPath}
             className={classNameHandler(appRoutes.aboutUsPath)}
