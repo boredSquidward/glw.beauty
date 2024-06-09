@@ -13,7 +13,7 @@ export const ReviewsSection = () => {
   const width = window.innerWidth;
   return (
     <div
-      className={`${width <= 375 ? "px-5" : "p-10"} bg-white lg:px-8 xl:px-20`}
+      className={`${width <= 375 ? "px-3" : "p-5"} bg-white lg:px-8 xl:px-20`}
     >
       <div className="mx-auto pb-6 lg:pb-8 xl:pb-20">
         <div>
@@ -59,7 +59,7 @@ export const ReviewsSection = () => {
                   </div>
                 </a>
               </div>
-              <div className="group relative sm:pr-5">
+              <div className="group relative sm:pr-10">
                 <p className="mt-5 text-xs lg:text-sm xl:text-base 2xl:text-xl 2xl:leading-normal 2xl:mt-10 text-justify text-gray-600">
                   EXCELLENT!!!!!!! I get a hydrafacial for my eczema and it is
                   absolutely worth every single cent. Her studio is clean,
