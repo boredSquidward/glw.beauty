@@ -1,10 +1,14 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import clsx from "clsx";
+
 import { appRoutes } from "../../core/constants/routes";
+import { classNameHandler } from "../../logic/navbarItemClassNameHandler";
 
 function MyPopover() {
+  const location = useLocation();
+
   return (
     <Popover>
       {({ open }) => (
@@ -14,23 +18,32 @@ function MyPopover() {
             <ChevronDownIcon className={clsx("size-5", open && "rotate-180")} />
           </PopoverButton>
           <PopoverPanel
-            anchor="bottom"
-            className="sm:mt-3 xs:w-full text-end sm:w-56 z-50 flex flex-col text-white bg-black rounded-b-xl"
+            anchor="bottom end"
+            className="sm:mt-3 text-end w-56 z-50 flex flex-col text-white bg-black rounded-b-xl"
           >
             <Link
-              className="m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md"
+              className={`${classNameHandler(
+                appRoutes["laser-hair-removal"],
+                location
+              )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
               to={appRoutes["laser-hair-removal"]}
             >
               Laser Hair Removal
             </Link>
             <Link
-              className="m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md"
+              className={`${classNameHandler(
+                appRoutes["derma-frac"],
+                location
+              )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
               to={appRoutes["derma-frac"]}
             >
               Derma-frac
             </Link>
             <Link
-              className="m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md"
+              className={`${classNameHandler(
+                appRoutes["hydra-facial"],
+                location
+              )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
               to={appRoutes["hydra-facial"]}
             >
               Hydrafacial
