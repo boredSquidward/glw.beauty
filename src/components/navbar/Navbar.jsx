@@ -1,44 +1,20 @@
-import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
-
-import Logo from "../../assets/images/logo.png";
-import { appRoutes } from "../../core/constants/routes";
-import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link, useLocation } from "react-router-dom";
+import { Disclosure } from "@headlessui/react";
+import { useState } from "react";
+
+import { classNameHandler } from "../../logic/navbarItemClassNameHandler";
+import { appRoutes } from "../../core/constants/routes";
+import Logo from "../../assets/images/logo.png";
 import MyPopover from "./Popover";
 
 function Navbar() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
-
-  const classNameHandler = (path) => {
-    if (location.pathname === path) {
-      return windowWidth >= 640
-        ? "2xl:px-6 px-3 2xl:py-4 py-2 bg-gray-900 text-white 2xl:text-3xl text-sm font-medium rounded-md"
-        : "px-3 py-2 bg-gray-900 text-white block text-base font-medium rounded-md";
-    } else {
-      return windowWidth >= 640
-        ? "2xl:px-6 px-3 2xl:py-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white 2xl:text-3xl text-sm font-medium rounded-md"
-        : "px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-white block text-base font-medium rounded-md";
-    }
-  };
 
   const clickHandler = () => {
     setIsDropdownOpen((prevState) => !prevState);
   };
-
-  const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <nav className="bg-black top-0 w-screen border-b border-gray-900">
@@ -69,14 +45,14 @@ function Navbar() {
             <div className="flex space-x-4 items-center">
               <Link
                 to={appRoutes.homePath}
-                className={classNameHandler(appRoutes.homePath)}
+                className={classNameHandler(appRoutes.homePath, location)}
               >
                 HOME
               </Link>
               <MyPopover />
               <Link
                 to={appRoutes.aboutUsPath}
-                className={classNameHandler(appRoutes.aboutUsPath)}
+                className={classNameHandler(appRoutes.aboutUsPath, location)}
               >
                 ABOUT US
               </Link>
@@ -92,7 +68,7 @@ function Navbar() {
         >
           <Link
             to={appRoutes.homePath}
-            className={classNameHandler(appRoutes.homePath)}
+            className={classNameHandler(appRoutes.homePath, location)}
             aria-current="page"
           >
             HOME
@@ -100,7 +76,7 @@ function Navbar() {
           <MyPopover />
           <Link
             to={appRoutes.aboutUsPath}
-            className={classNameHandler(appRoutes.aboutUsPath)}
+            className={classNameHandler(appRoutes.aboutUsPath, location)}
           >
             ABOUT US
           </Link>
