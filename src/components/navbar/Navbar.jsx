@@ -41,63 +41,45 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-black top-0 w-screen">
-      <div className="mx-auto w-screen px-2 sm:px-6 lg:px-8">
-        <div className="relative flex 2xl:h-36 h-20 items-center justify-between">
-          <div className="flex flex-1 items-center justify-between">
-            <Link
-              className="flex flex-shrink-0 items-center"
-              to={appRoutes.homePath}
-            >
-              <img
-                className="2xl:h-28 h-16 w-auto"
-                alt="glw.beauty"
-                src={Logo}
-              />
-            </Link>
-            <div className="sm:hidden">
-              <Disclosure>
-                <Disclosure.Button
-                  onClick={clickHandler}
-                  className="p-2 mb-2 relative inline-flex items-center justify-center rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                >
-                  <span className="absolute -inset-0.5" />
-                  {isDropdownOpen ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </Disclosure>
-            </div>
-            <div className="hidden sm:ml-6 sm:flex items-center">
-              <div className="flex space-x-4 items-center">
-                <Link
-                  to={appRoutes.homePath}
-                  className={classNameHandler(appRoutes.homePath)}
-                >
-                  HOME
-                </Link>
-                <MyPopover />
-                {/* <Link
-                  to={appRoutes.servicesPath}
-                  className={classNameHandler(appRoutes.servicesPath)}
-                >
-                  SERVICES
-                </Link> */}
-                {/* <Link
-                  to={appRoutes.contactUsPath}
-                  className={classNameHandler(appRoutes.contactUsPath)}
-                >
-                  CONTACT US
-                </Link> */}
-                <Link
-                  to={appRoutes.aboutUsPath}
-                  className={classNameHandler(appRoutes.aboutUsPath)}
-                >
-                  ABOUT US
-                </Link>
-              </div>
+    <nav className="bg-black top-0 w-screen border-b border-gray-900">
+      <div className="mx-auto w-screen sm:px-15 py-2 sm:px-10 lg:px-8">
+        <div className="relative p-4 flex 2xl:h-36 h-20 items-center justify-between">
+          <Link
+            className="flex flex-shrink-0 items-center"
+            to={appRoutes.homePath}
+          >
+            <img className="2xl:h-28 h-12 w-auto" alt="glw.beauty" src={Logo} />
+          </Link>
+          <div className="sm:hidden">
+            <Disclosure>
+              <Disclosure.Button
+                onClick={clickHandler}
+                className="p-2 mb-2 relative inline-flex items-center justify-center rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              >
+                <span className="absolute -inset-0.5" />
+                {isDropdownOpen ? (
+                  <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                )}
+              </Disclosure.Button>
+            </Disclosure>
+          </div>
+          <div className="hidden sm:ml-6 sm:flex items-center">
+            <div className="flex space-x-4 items-center">
+              <Link
+                to={appRoutes.homePath}
+                className={classNameHandler(appRoutes.homePath)}
+              >
+                HOME
+              </Link>
+              <MyPopover />
+              <Link
+                to={appRoutes.aboutUsPath}
+                className={classNameHandler(appRoutes.aboutUsPath)}
+              >
+                ABOUT US
+              </Link>
             </div>
           </div>
         </div>
@@ -116,18 +98,6 @@ function Navbar() {
             HOME
           </Link>
           <MyPopover />
-          {/* <Link
-            to={appRoutes.servicesPath}
-            className={classNameHandler(appRoutes.servicesPath)}
-          >
-            SERVICES
-          </Link> */}
-          {/* <Link
-            to={appRoutes.contactUsPath}
-            className={classNameHandler(appRoutes.contactUsPath)}
-          >
-            CONTACT US
-          </Link> */}
           <Link
             to={appRoutes.aboutUsPath}
             className={classNameHandler(appRoutes.aboutUsPath)}
