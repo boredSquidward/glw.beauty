@@ -1,32 +1,21 @@
 import React from "react";
+
 import Logo from "../../assets/images/logo.png";
 import Instagram from "../../assets/icons/logo-instagram.svg";
 import Facebook from "../../assets/icons/logo-facebook.svg";
-import styles from "./footer.module.css";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="min-h-96 p-10 flex flex-col items-center justify-center bg-black text-white">
-      <div className="flex flex-col justify-around w-screen sm:flex-row items-center">
-        <div className={`${styles.location} p-10 w-full h-96 sm:p-0 sm:w-2/5`}>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6685.446406844138!2d-96.80474900000002!3d33.090066!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3cdb4ca82cd1%3A0x14431c50aaeba374!2sThe%20Huntington%20Apartments!5e0!3m2!1sen!2suk!4v1714156489557!5m2!1sen!2suk"
-            title="glw_beauty_location"
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-            sandbox="allow-scripts allow-same-origin"
-            className="h-full w-full bg-gray-100"
-          ></iframe>
-        </div>
-        <div className="w-full py-6 sm:w-2/5 flex flex-col items-center justify-center">
+    <footer className="min-h-96 flex flex-col items-center justify-center border-t border-gray-900 bg-black text-white">
+      <div className="flex flex-col justify-between w-screen sm:flex-row items-center">
+        <div className="w-full py-6 sm:w-1/2 flex flex-col items-center justify-center">
           <img
-            src={Logo}
-            alt="logo"
             className=" w-32 2xl:w-72 h-auto"
             loading="lazy"
+            src={Logo}
+            alt="logo"
           />
           <h1 className="text-xs 2xl:text-2xl font-bold">Skin Care & Beauty</h1>
           <p className="p-3 2xl:p-10 text-center text-sm 2xl:text-3xl">
@@ -70,10 +59,19 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          <div className="pt-10 2xl:pt-16 text-xs 2xl:text-2xl text-center">
+            © Copyright 2012 - {year} | Glisten Wellness | All Rights Reserved
+          </div>
         </div>
-      </div>
-      <div className="pt-10 2xl:pt-16 text-xs 2xl:text-2xl text-center">
-        © Copyright 2012 - {year} | Glisten Wellness | All Rights Reserved
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6685.446406844138!2d-96.80474900000002!3d33.090066!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3cdb4ca82cd1%3A0x14431c50aaeba374!2sThe%20Huntington%20Apartments!5e0!3m2!1sen!2suk!4v1714156489557!5m2!1sen!2suk"
+          referrerPolicy="no-referrer-when-downgrade"
+          sandbox="allow-scripts allow-same-origin"
+          className="h-full w-full bg-gray-100 sm:w-1/2 min-h-96"
+          title="glw_beauty_location"
+          allowFullScreen
+          loading="lazy"
+        ></iframe>
       </div>
     </footer>
   );
