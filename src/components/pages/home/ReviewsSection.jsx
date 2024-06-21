@@ -13,88 +13,96 @@ export const ReviewsSection = () => {
       <div className="mx-auto">
         <FirstPart />
         <SecPart />
+        <article className="px-3 flex flex-col items-center justify-center h-screen">
+          <div className="sm:max-w-96">
+            <a
+              href="https://maps.app.goo.gl/8J6YaAaZHqfkHheeA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              <div className="flex items-center gap-x-4">
+                <img
+                  src={KelleyBlackshear}
+                  alt="KelleyBlackshear"
+                  className="w-10 xl:w-14 2xl:w-24 h-10 xl:h-14 2xl:h-24 rounded-full bg-gray-50"
+                />
+                <div className="text-sm leading-6">
+                  <p className="font-semibold text-gray-900 xl:text-base 2xl:text-2xl">
+                    <span className="inset-0"></span>
+                    Kelley Blackshear
+                  </p>
+                  <div className="flex items-center gap-x-4 text-xs 2xl:text-xl">
+                    <time dateTime="2020-03-16" className="text-gray-500">
+                      Dec, 2023
+                    </time>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div className="group">
+              <p className="mt-3 text-xs lg:text-sm xl:text-base 2xl:text-xl text-justify text-gray-600">
+                Just completed my second laser visit with great results. I am
+                doing the significant parts of my body (full legs, face,
+                Brazilian, underarms and bum) for a great price. After my first
+                visit. I experienced a little sensitivity on my bum to hot water
+                which I used the recommended aloe vera to soothe. Right after I
+                had a little hair growth return (hair that was already there and
+                seems normal according to what I read) and then no hair for 2
+                weeks on my face, bum and legs. I was amazed, I always had thick
+                hair growth in those areas. Some hair did return underarms and
+                Brazilian area however, nothing like what I had before alot
+                thinner and much less hair. At first I thought maybe the
+                treatment didn’t take, as well But I was completely wrong. I
+                can’t wait to see what comes back this time. Hoping for less and
+                less hair. Rozana was a complete professional, clean office
+                space and very nice. The experience while uncomfortable isn’t
+                unbearable and she is understanding. Feels like your skin is
+                being popped with a rubber band. I am in and out in 45 mins or
+                less each visit. I would highly recommend Rozana not only for
+                laser hair removal services but her high quality service and
+                machine. Can’t wait to see the final results.
+              </p>
+            </div>
+          </div>
+        </article>
       </div>
     </>
   );
 };
 
 const FirstPart = () => {
-  const width = window.innerWidth;
-
   return (
-    <div className="flex flex-col mx-auto px-3">
-      <div className="flex flex-col sm:flex-row justify-between items-start">
-        <article
-          className="pt-5 flex flex-col items-start justify-around w-full"
-          style={width >= 640 ? { width: "46%" } : {}}
-        >
-          <a
-            href="https://maps.app.goo.gl/WD2gZ2JiueYnQtP97"
-            className="cursor-pointer"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <div className="relative flex items-center gap-x-4">
-              <img
-                className="w-10 xl:w-14 2xl:w-24 h-10 xl:h-14 2xl:h-24 rounded-full bg-gray-50"
-                src={PriscillaCarlos}
-                alt="PriscillaCarlos"
-              />
-              <div className="text-sm leading-6">
-                <p className="font-semibold xl:text-base 2xl:text-2xl">
-                  <span className="absolute inset-0"></span>
-                  Priscilla Carlos
-                </p>
-                <div className="flex items-center gap-x-4 text-xs 2xl:text-xl">
-                  <time dateTime="2020-03-16" className="text-gray-600">
-                    Aug, 2023
-                  </time>
+    <div className="flex flex-col mx-auto">
+      <div className="flex flex-col sm:flex-row justify-between items-start h-screen">
+        <article className="px-3 flex flex-col items-center justify-center h-1/2 sm:h-full w-full sm:w-1/2 bg-black text-white border-t border-gray-900 ">
+          <div className="max-w-96">
+            <a
+              href="https://maps.app.goo.gl/L6Ums2mTCSkwdTkL6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer"
+            >
+              <div className="flex items-center gap-x-4">
+                <img
+                  src={ViannaAndDad}
+                  alt="viannaAndDad"
+                  className="w-10 xl:w-14 2xl:w-24 h-10 xl:h-14 2xl:h-24 rounded-full bg-gray-50"
+                />
+                <div className="text-sm leading-6">
+                  <p className="font-semibold xl:text-base 2xl:text-2xl">
+                    <span className="inset-0"></span>
+                    Vianna & dad
+                  </p>
+                  <div className="flex items-center gap-x-4 text-xs 2xl:text-xl">
+                    <time dateTime="2020-03-16" className="text-gray-400">
+                      Nov, 2023
+                    </time>
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-          <div className="group relative">
-            <p className="mt-3 text-xs text-justify lg:text-sm xl:text-base 2xl:text-xl">
-              If you’re looking for laser hair removal and facials then this is
-              the place to go! Rozana is super sweet, professional, and will
-              take good care of you! I’ve gone to several laser hair removal
-              locations and this is the best one. For my first ever facial, the
-              hydro facial was phenomenal. Left my skin feeling super clean,
-              soft, and glowy (no breakouts). Definitely check it out!
-            </p>
-          </div>
-        </article>
-        <article
-          className=" pt-5 sm:pt-0 flex flex-col items-start justify-around w-full"
-          style={width >= 640 ? { width: "50%" } : {}}
-        >
-          <a
-            href="https://maps.app.goo.gl/L6Ums2mTCSkwdTkL6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cursor-pointer"
-          >
-            <div className="flex items-center gap-x-4">
-              <img
-                src={ViannaAndDad}
-                alt="viannaAndDad"
-                className="w-10 xl:w-14 2xl:w-24 h-10 xl:h-14 2xl:h-24 rounded-full bg-gray-50"
-              />
-              <div className="text-sm leading-6">
-                <p className="font-semibold text-gray-900 xl:text-base 2xl:text-2xl">
-                  <span className="inset-0"></span>
-                  Vianna & dad
-                </p>
-                <div className="flex items-center gap-x-4 text-xs 2xl:text-xl">
-                  <time dateTime="2020-03-16" className="text-gray-500">
-                    Nov, 2023
-                  </time>
-                </div>
-              </div>
-            </div>
-          </a>
-          <div className="group relative">
-            <p className="mt-3 text-xs lg:text-sm xl:text-base 2xl:text-xl text-justify text-gray-600">
+            </a>
+            <p className="mt-3 text-xs lg:text-sm xl:text-base 2xl:text-xl text-justify">
               I recently had laser hair removal at glisten wellness I’m thrilled
               with the results and the overall experience. Rozana was incredibly
               professional and made me feel comfortable throughout the process.
@@ -107,57 +115,44 @@ const FirstPart = () => {
             </p>
           </div>
         </article>
-      </div>
-      <article className="flex flex-col items-start justify-around py-5">
-        <a
-          href="https://maps.app.goo.gl/8J6YaAaZHqfkHheeA"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="cursor-pointer"
-        >
-          <div className="flex items-center gap-x-4">
-            <img
-              src={KelleyBlackshear}
-              alt="KelleyBlackshear"
-              className="w-10 xl:w-14 2xl:w-24 h-10 xl:h-14 2xl:h-24 rounded-full bg-gray-50"
-            />
-            <div className="text-sm leading-6">
-              <p className="font-semibold text-gray-900 xl:text-base 2xl:text-2xl">
-                <span className="inset-0"></span>
-                Kelley Blackshear
-              </p>
-              <div className="flex items-center gap-x-4 text-xs 2xl:text-xl">
-                <time dateTime="2020-03-16" className="text-gray-500">
-                  Dec, 2023
-                </time>
+        <article className="px-3 flex flex-col items-center justify-center h-1/2 sm:h-full w-full sm:w-1/2">
+          <div className="max-w-96">
+            <a
+              href="https://maps.app.goo.gl/WD2gZ2JiueYnQtP97"
+              className="cursor-pointer"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div className="relative flex items-center gap-x-4">
+                <img
+                  className="w-10 xl:w-14 2xl:w-24 h-10 xl:h-14 2xl:h-24 rounded-full bg-gray-50"
+                  src={PriscillaCarlos}
+                  alt="PriscillaCarlos"
+                />
+                <div className="text-sm leading-6">
+                  <p className="font-semibold xl:text-base 2xl:text-2xl">
+                    <span className="absolute inset-0"></span>
+                    Priscilla Carlos
+                  </p>
+                  <div className="flex items-center gap-x-4 text-xs 2xl:text-xl">
+                    <time dateTime="2020-03-16" className="text-gray-600">
+                      Aug, 2023
+                    </time>
+                  </div>
+                </div>
               </div>
-            </div>
+            </a>
+            <p className="mt-3 max-w-96 text-xs text-justify lg:text-sm xl:text-base 2xl:text-xl">
+              If you’re looking for laser hair removal and facials then this is
+              the place to go! Rozana is super sweet, professional, and will
+              take good care of you! I’ve gone to several laser hair removal
+              locations and this is the best one. For my first ever facial, the
+              hydro facial was phenomenal. Left my skin feeling super clean,
+              soft, and glowy (no breakouts). Definitely check it out!
+            </p>
           </div>
-        </a>
-        <div className="group relative">
-          <p className="mt-3 text-xs lg:text-sm xl:text-base 2xl:text-xl text-justify text-gray-600">
-            Just completed my second laser visit with great results. I am doing
-            the significant parts of my body (full legs, face, Brazilian,
-            underarms and bum) for a great price. After my first visit. I
-            experienced a little sensitivity on my bum to hot water which I used
-            the recommended aloe vera to soothe. Right after I had a little hair
-            growth return (hair that was already there and seems normal
-            according to what I read) and then no hair for 2 weeks on my face,
-            bum and legs. I was amazed, I always had thick hair growth in those
-            areas. Some hair did return underarms and Brazilian area however,
-            nothing like what I had before alot thinner and much less hair. At
-            first I thought maybe the treatment didn’t take, as well But I was
-            completely wrong. I can’t wait to see what comes back this time.
-            Hoping for less and less hair. Rozana was a complete professional,
-            clean office space and very nice. The experience while uncomfortable
-            isn’t unbearable and she is understanding. Feels like your skin is
-            being popped with a rubber band. I am in and out in 45 mins or less
-            each visit. I would highly recommend Rozana not only for laser hair
-            removal services but her high quality service and machine. Can’t
-            wait to see the final results.
-          </p>
-        </div>
-      </article>
+        </article>
+      </div>
     </div>
   );
 };

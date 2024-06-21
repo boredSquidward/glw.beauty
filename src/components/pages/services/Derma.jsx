@@ -2,17 +2,18 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import Img1 from "../../../assets/images/1687253926649173a63b3b41.avif";
-import Img2 from "../../../assets/images/clean-background-w7k9sqsj91esv3sm.avif";
 import Img3 from "../../../assets/images/pexels-photo-3849160_1.avif";
 import Scaffold from "../../scaffold/Scaffold";
 
 export const Derma = () => {
   const [isImg1Loaded, setIsImg1Loaded] = useState(false);
+  const [isImg3Loaded, setIsImg3Loaded] = useState(false);
+
   return (
     <Scaffold>
       <article className="leading-tight">
-        <div className="h-screen flex flex-col sm:flex-row justify-between items-center bg-black">
-          <div className="bg-lady-in-derma-page xs:w-full sm:h-full sm:w-1/2 xs:h-2/3 bg-cover bg-center bg-no-repeat">
+        <section className="h-screen flex flex-col sm:flex-row justify-between items-center bg-black">
+          <div className="relative bg-lady-in-derma-page w-full h-full sm:w-1/2 bg-cover bg-center bg-no-repeat">
             <img
               className={`${
                 isImg1Loaded ? "opacity-100" : "opacity-0"
@@ -24,9 +25,8 @@ export const Derma = () => {
             />
           </div>
           <div
-            className={`flex flex-col justify-start sm:justify-center items-center xs:px-5 sm:p-5 sm:w-1/2 xs:h-1/3 sm:h-full text-white tracking-tight text-center`}
+            className={`absolute sm:relative bottom-10 flex flex-col justify-start sm:justify-center items-center xs:px-5 sm:p-5 sm:w-1/2 sm:h-full text-white tracking-tight text-center`}
           >
-            <Link id="derma-frac"></Link>
             <h1 className="text-xl xl:text-4xl 2xl:text-5xl font-bold">
               DERMAFRAC MICRO CHANNELING
             </h1>
@@ -34,7 +34,7 @@ export const Derma = () => {
               MICRO-NEEDLING WITH THE DERMAFRAC SYSTEM
             </h2>
 
-            <p className="pt-2 text-center text-xs lg:text-sm xl:text-base 2xl:text-xl 2xl:leading-normal">
+            <p className="pt-3 text-center text-xs lg:text-sm xl:text-base 2xl:text-xl 2xl:leading-normal">
               Micro-needling is rapidly becoming one of the most popular
               techniques used to smooth out rough, brittle, or wrinkled skin. As
               we age, our skin holds less moisture and is subject to folding and
@@ -45,7 +45,7 @@ export const Derma = () => {
               target="_blank"
               id="book-now"
             >
-              <div className="flex flex-row justify-center items-center gap-2 py-2 px-4 xs:mt-2 sm:mt-5 text-center text-black 2xl:text-4xl xl:text-2xl text-base font-bold rounded-full bg-white hover:ring-2 hover:ring-blue-500">
+              <div className="flex flex-row justify-center items-center gap-2 py-2 px-4 mt-4 text-center text-black 2xl:text-4xl xl:text-2xl text-base font-bold rounded-full bg-white hover:ring-2 hover:ring-blue-500">
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -66,32 +66,23 @@ export const Derma = () => {
               </div>
             </Link>
           </div>
-        </div>
-        <div className="flex flex-col h-screen w-screen text-center items-center justify-center bg-white">
-          <img
-            className="relative object-cover w-full h-screen"
-            loading="lazy"
-            src={Img2}
-            alt="bg"
-          />
-          <div
-            className="absolute px-3 text-xs lg:text-sm xl:text-base 2xl:text-xl 2xl:leading-normal text-center"
-            style={{ maxWidth: "600px" }}
-          >
+        </section>
+        <section className="bg-white-bg flex flex-col h-screen w-screen text-center items-center justify-center bg-white bg-cover bg-no-repeat">
+          <div className="absolute px-3 text-xs lg:text-sm xl:text-base 2xl:text-xl 2xl:leading-normal text-justify max-w-96">
             <p className="">
               Pore size tends to increase, and any discolorations such as injury
               scars or freckles become more noticeable. Micro-needling involves
               the creation of tiny controlled wounds. As these microchannels
               heal, the body replaces old tissue with healthier cells.
             </p>
-            <p className="pt-4">
+            <p className="pt-3">
               The DermaFrac system is unique in that it not only creates
               channels in the skin, but it also delivers nutrients and performs
               a crystal-free microdermabrasion. We highly recommend this
               all-in-one treatment for those who show signs of aging skin on the
               face.
             </p>
-            <p className="pt-4">
+            <p className="pt-3">
               About Micro-Needling The idea behind this treatment is that
               controlled wounds will heal over with new, healthier tissue. The
               channels created by the multitude of tiny micro-needles kick
@@ -101,30 +92,37 @@ export const Derma = () => {
               also increases.
             </p>
           </div>
-        </div>
-        <div className="h-screen flex flex-col sm:flex-row 2xl:mt-10 bg-black">
-          <div className="h-1/2 py-5 sm:h-screen sm:w-1/2 flex sm:items-center items-end justify-center">
-            <p
-              className="px-3 text-xs lg:text-sm xl:text-base 2xl:text-xl 2xl:leading-normal text-center text-white"
-              style={{ maxWidth: "700px" }}
-            >
+        </section>
+        <section className="h-screen flex flex-col sm:flex-row 2xl:mt-10 bg-black border-b border-gray-900">
+          <div className="h-1/2 py-5 sm:h-screen sm:w-1/2 flex flex-col sm:items-center items-end justify-center">
+            <p className="px-3 text-xs lg:text-sm xl:text-base 2xl:text-xl 2xl:leading-normal text-white max-w-96 text-justify">
               The DermaFrac system is a newer technique that involves using a
               specialized instrument containing a delivery mechanism for
-              nutrient introduction. The pen-style wand with the tiny needles at
-              one end makes small punctures in the skin, usually to a depth of
-              about two millimeters. The actual depth of the puncture is
-              determined by closely examining the thickness of the skin. For
-              maximum efficiency, the punctures should only be as deep as the
-              dermal-epidermal junction.
+              nutrient introduction.
+            </p>
+            <p className="pt-3 px-3 text-xs lg:text-sm xl:text-base 2xl:text-xl 2xl:leading-normal text-white max-w-96 text-justify">
+              The pen-style wand with the tiny needles at one end makes small
+              punctures in the skin, usually to a depth of about two
+              millimeters.
+            </p>
+            <p className="pt-3 px-3 text-xs lg:text-sm xl:text-base 2xl:text-xl 2xl:leading-normal text-white max-w-96 text-justify">
+              The actual depth of the puncture is determined by closely
+              examining the thickness of the skin. For maximum efficiency, the
+              punctures should only be as deep as the dermal-epidermal junction.
             </p>
           </div>
-          <img
-            className="h-1/2 sm:h-screen w-full sm:w-1/2 object-cover object-center"
-            alt="micro-niddle"
-            loading="lazy"
-            src={Img3}
-          />
-        </div>
+          <div className="h-1/2 w-full sm:w-1/2 bg-flower bg-cover bg-no-repeat">
+            <img
+              className={`${
+                isImg3Loaded ? "opacity-100" : "opacity-0"
+              } w-full h-full sm:h-screen object-cover object-center transition-opacity`}
+              onLoad={() => setIsImg3Loaded(true)}
+              alt="micro-niddle"
+              loading="lazy"
+              src={Img3}
+            />
+          </div>
+        </section>
       </article>
     </Scaffold>
   );

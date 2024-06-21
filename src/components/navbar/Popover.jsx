@@ -35,7 +35,7 @@ function MyPopover() {
                 appRoutes["derma-frac"],
                 location
               )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
-              to={appRoutes["derma-frac"]}
+              to={`${appRoutes["derma-frac"]}`}
             >
               Derma-frac
             </Link>

@@ -25,6 +25,16 @@ module.exports = {
         "shani-before": "url('./assets/hashed/shani-before.png')",
         "lady-in-derma-page":
           "url('./assets/hashed/hashed-lady-in-derma-page.png')",
+        flower: "url('./assets/hashed/hashed-flower.png')",
+        "white-bg":
+          "url('./assets/images/clean-background-w7k9sqsj91esv3sm.avif')",
+        "hair-removal-page":
+          "url('./assets/hashed/hashed-hair-removal-page.png')",
+        "hair-removal-page-2":
+          "url('./assets/hashed/hashed-hair-removal-2.png')",
+        "hydro-facial": "url('./assets/hashed/hashed-hydrofacial-page.png')",
+        clinic: "url('./assets/hashed/hashed-clinic.png')",
+        roza: "url('./assets/hashed/hashed-roza.png')",
       },
     },
   },
