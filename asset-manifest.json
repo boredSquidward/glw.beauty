@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/glw.beauty/static/css/main.e5e10f4c.css",
+    "main.js": "/glw.beauty/static/js/main.ff104096.js",
+    "static/css/251.38320096.chunk.css": "/glw.beauty/static/css/251.38320096.chunk.css",
+    "static/js/251.c0d7e0af.chunk.js": "/glw.beauty/static/js/251.c0d7e0af.chunk.js",
+    "static/js/675.5354ba8e.chunk.js": "/glw.beauty/static/js/675.5354ba8e.chunk.js",
+    "static/js/826.950f62bc.chunk.js": "/glw.beauty/static/js/826.950f62bc.chunk.js",
+    "static/media/main-pic.avif": "/glw.beauty/static/media/main-pic.68581a638a45d515a655.avif",
+    "static/media/Story-6.avif": "/glw.beauty/static/media/Story-6.fdebab905029d282285f.avif",
+    "static/media/Story-2.avif": "/glw.beauty/static/media/Story-2.8578ba1f5b79a2889fbe.avif",
+    "static/media/pexels-photo-3849160_1.avif": "/glw.beauty/static/media/pexels-photo-3849160_1.4c449518fd35f65417d5.avif",
+    "static/media/shani-after.avif": "/glw.beauty/static/media/shani-after.e6df2cfb45ea04778239.avif",
+    "static/media/shani-before.avif": "/glw.beauty/static/media/shani-before.c52fe504d9cebd7af34b.avif",
+    "static/media/IMG_3930.avif": "/glw.beauty/static/media/IMG_3930.f5f578e489725ce85be0.avif",
+    "static/media/Story-3.avif": "/glw.beauty/static/media/Story-3.b39da879436c57eac898.avif",
+    "static/media/hair-removal-page.avif": "/glw.beauty/static/media/hair-removal-page.3af0788c784a75e0e23c.avif",
+    "static/media/Hydrofacial-page.avif": "/glw.beauty/static/media/Hydrofacial-page.ab3dee9426a483a3a2bc.avif",
+    "static/media/IMG_7427.avif": "/glw.beauty/static/media/IMG_7427.380a5c5895f78ca0496f.avif",
+    "static/media/avif": "/glw.beauty/static/media/1687253926649173a63b3b41.5f5d149c983d538c5cf0.avif",
+    "static/media/Vianna-and-dad.png": "/glw.beauty/static/media/Vianna-and-dad.951c34fa2969e179f478.png",
+    "static/media/logo.png": "/glw.beauty/static/media/logo.c9c87a8c42ada44bdbc1.png",
+    "static/media/Kelley-Blackshear.png": "/glw.beauty/static/media/Kelley-Blackshear.66fa1e6fb45d06884fe3.png",
+    "static/media/Priscilla-Carlos.png": "/glw.beauty/static/media/Priscilla-Carlos.d07a0bb3978fdcd4e079.png",
+    "static/media/clean-background-w7k9sqsj91esv3sm.avif": "/glw.beauty/static/media/clean-background-w7k9sqsj91esv3sm.2f155cb42241e8f2f69c.avif",
+    "index.html": "/glw.beauty/index.html",
+    "static/media/logo-instagram.svg": "/glw.beauty/static/media/logo-instagram.b15bc616029fa0ee5c09334bd2d75d12.svg",
+    "static/media/logo-facebook.svg": "/glw.beauty/static/media/logo-facebook.6555562764c3d103f26762c808f8a357.svg",
+    "main.e5e10f4c.css.map": "/glw.beauty/static/css/main.e5e10f4c.css.map",
+    "main.ff104096.js.map": "/glw.beauty/static/js/main.ff104096.js.map",
+    "251.38320096.chunk.css.map": "/glw.beauty/static/css/251.38320096.chunk.css.map",
+    "251.c0d7e0af.chunk.js.map": "/glw.beauty/static/js/251.c0d7e0af.chunk.js.map",
+    "675.5354ba8e.chunk.js.map": "/glw.beauty/static/js/675.5354ba8e.chunk.js.map",
+    "826.950f62bc.chunk.js.map": "/glw.beauty/static/js/826.950f62bc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5e10f4c.css",
+    "static/js/main.ff104096.js"
+  ]
+}
