@@ -1,6 +1,6 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import clsx from "clsx";
 
 import { appRoutes } from "../../core/constants/routes";
@@ -22,7 +22,7 @@ function MyPopover() {
             anchor="bottom end"
             className="sm:mt-3 text-end w-56 z-50 flex flex-col text-white bg-black rounded-b-xl"
           >
-            <Link
+            <HashLink
               className={`${classNameHandler(
                 appRoutes["laser-hair-removal"],
                 location
@@ -30,7 +30,7 @@ function MyPopover() {
               to={`${appRoutes["laser-hair-removal"]}#top`}
             >
               Laser Hair Removal
-            </Link>
+            </HashLink>
             <HashLink
               className={`${classNameHandler(
                 appRoutes["derma-frac"],
