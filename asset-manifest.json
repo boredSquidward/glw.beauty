@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/glw.beauty/static/css/main.e5e10f4c.css",
-    "main.js": "/glw.beauty/static/js/main.a91bca3b.js",
+    "main.js": "/glw.beauty/static/js/main.c0d33d89.js",
     "static/css/211.b5ef135c.chunk.css": "/glw.beauty/static/css/211.b5ef135c.chunk.css",
-    "static/js/211.1c2b1740.chunk.js": "/glw.beauty/static/js/211.1c2b1740.chunk.js",
+    "static/js/211.58282e8d.chunk.js": "/glw.beauty/static/js/211.58282e8d.chunk.js",
     "static/js/675.4f0d4b5a.chunk.js": "/glw.beauty/static/js/675.4f0d4b5a.chunk.js",
     "static/js/826.950f62bc.chunk.js": "/glw.beauty/static/js/826.950f62bc.chunk.js",
     "static/media/main-pic.avif": "/glw.beauty/static/media/main-pic.68581a638a45d515a655.avif",
@@ -27,14 +27,14 @@
     "static/media/logo-instagram.svg": "/glw.beauty/static/media/logo-instagram.b15bc616029fa0ee5c09334bd2d75d12.svg",
     "static/media/logo-facebook.svg": "/glw.beauty/static/media/logo-facebook.6555562764c3d103f26762c808f8a357.svg",
     "main.e5e10f4c.css.map": "/glw.beauty/static/css/main.e5e10f4c.css.map",
-    "main.a91bca3b.js.map": "/glw.beauty/static/js/main.a91bca3b.js.map",
+    "main.c0d33d89.js.map": "/glw.beauty/static/js/main.c0d33d89.js.map",
     "211.b5ef135c.chunk.css.map": "/glw.beauty/static/css/211.b5ef135c.chunk.css.map",
-    "211.1c2b1740.chunk.js.map": "/glw.beauty/static/js/211.1c2b1740.chunk.js.map",
+    "211.58282e8d.chunk.js.map": "/glw.beauty/static/js/211.58282e8d.chunk.js.map",
     "675.4f0d4b5a.chunk.js.map": "/glw.beauty/static/js/675.4f0d4b5a.chunk.js.map",
     "826.950f62bc.chunk.js.map": "/glw.beauty/static/js/826.950f62bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5e10f4c.css",
-    "static/js/main.a91bca3b.js"
+    "static/js/main.c0d33d89.js"
   ]
 }
