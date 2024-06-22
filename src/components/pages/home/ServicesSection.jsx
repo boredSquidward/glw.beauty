@@ -1,4 +1,4 @@
-import { HashLink as Link } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 
@@ -38,7 +38,7 @@ export const ServicesSection = () => {
       >
         <div className="flex flex-col md:flex-row justify-around">
           <ServiceItem
-            to={`${appRoutes.servicesPath}#hair-removal`}
+            to={`${appRoutes["laser-hair-removal"]}#top`}
             setIsImgLoaded={setIsLaserRemovalLoaded}
             isImgLoaded={isLaserRemovalLoaded}
             title={"Laser Hair Removal"}
@@ -51,7 +51,7 @@ export const ServicesSection = () => {
           />
 
           <ServiceItem
-            to={`${appRoutes.servicesPath}#derma-frac`}
+            to={`${appRoutes["derma-frac"]}#top`}
             title={"Dermafrac Micro Channeling"}
             setIsImgLoaded={setIsDermaLoaded}
             isImgLoaded={isDermaLoaded}
@@ -65,7 +65,7 @@ export const ServicesSection = () => {
           />
 
           <ServiceItem
-            to={`${appRoutes.servicesPath}#hydra-facial`}
+            to={`${appRoutes["hydra-facial"]}#top`}
             setIsImgLoaded={setIsFacialLoaded}
             isImgLoaded={isFacialLoaded}
             title={"Hydra-Facial"}
@@ -97,7 +97,7 @@ const ServiceItem = ({
     className={`${className} max-w-80 border-white border-spacing-x-1 transition hover:scale-105 sm:p-0`}
     style={{ height: "85vh" }}
   >
-    <Link className="cursor-pointer" to={to}>
+    <HashLink className="cursor-pointer" to={to}>
       <div
         className={`${bg} z-50 w-full bg-no-repeat bg-cover rounded-2xl sm:rounded-t-2xl transition overflow-hidden`}
         style={{ height: "60vh" }}
@@ -112,7 +112,7 @@ const ServiceItem = ({
           src={img}
         />
       </div>
-    </Link>
+    </HashLink>
     <h1 className="text-white pt-3 text-sm lg:text-base xl:text-xl 2xl:text-2xl tracking-tight font-bold text-center">
       {title}
     </h1>
