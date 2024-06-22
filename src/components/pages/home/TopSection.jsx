@@ -8,7 +8,7 @@ import styles from "./home.module.css";
 export const TopSection = () => {
   const [isMainPicVisible, setIsMainPicVisible] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.9,
+    threshold: 0.7,
   });
 
   return (
