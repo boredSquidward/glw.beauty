@@ -5,6 +5,7 @@ import clsx from "clsx";
 
 import { appRoutes } from "../../core/constants/routes";
 import { classNameHandler } from "../../logic/navbarItemClassNameHandler";
+import { HashLink } from "react-router-hash-link";
 
 function MyPopover() {
   const location = useLocation();
@@ -26,28 +27,28 @@ function MyPopover() {
                 appRoutes["laser-hair-removal"],
                 location
               )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
-              to={appRoutes["laser-hair-removal"]}
+              to={`${appRoutes["laser-hair-removal"]}#top`}
             >
               Laser Hair Removal
             </Link>
-            <Link
+            <HashLink
               className={`${classNameHandler(
                 appRoutes["derma-frac"],
                 location
               )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
-              to={`${appRoutes["derma-frac"]}`}
+              to={`${appRoutes["derma-frac"]}#top`}
             >
               Derma-frac
-            </Link>
-            <Link
+            </HashLink>
+            <HashLink
               className={`${classNameHandler(
                 appRoutes["hydra-facial"],
                 location
               )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
-              to={appRoutes["hydra-facial"]}
+              to={`${appRoutes["hydra-facial"]}#top`}
             >
               Hydrafacial
-            </Link>
+            </HashLink>
           </PopoverPanel>
         </>
       )}

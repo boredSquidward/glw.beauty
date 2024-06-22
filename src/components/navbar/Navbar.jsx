@@ -1,5 +1,6 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useLocation } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Disclosure } from "@headlessui/react";
 import { useState } from "react";
 
@@ -43,19 +44,19 @@ function Navbar() {
           </div>
           <div className="hidden sm:ml-6 sm:flex items-center">
             <div className="flex space-x-4 items-center">
-              <Link
-                to={appRoutes.homePath}
+              <HashLink
+                to={`${appRoutes.homePath}#top`}
                 className={classNameHandler(appRoutes.homePath, location)}
               >
                 HOME
-              </Link>
+              </HashLink>
               <MyPopover />
-              <Link
-                to={appRoutes.aboutUsPath}
+              <HashLink
+                to={`${appRoutes.aboutUsPath}#top`}
                 className={classNameHandler(appRoutes.aboutUsPath, location)}
               >
                 ABOUT US
-              </Link>
+              </HashLink>
             </div>
           </div>
         </div>

@@ -8,9 +8,9 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="min-h-96 flex flex-col items-center justify-center bg-black text-white">
-      <div className="flex flex-col justify-between w-screen sm:flex-row items-center">
-        <div className="w-full py-6 sm:w-1/2 flex flex-col items-center justify-center">
+    <footer className="h-screen min-h-96 flex flex-col items-center justify-center bg-black text-white">
+      <div className="flex h-full flex-col justify-between w-screen sm:flex-row items-center">
+        <div className="w-full h-full py-6 sm:w-1/2 flex flex-col items-center justify-center">
           <img
             className=" w-32 2xl:w-72 h-auto"
             loading="lazy"
