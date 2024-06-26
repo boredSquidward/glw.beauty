@@ -1,5 +1,5 @@
-import { HashLink } from "react-router-hash-link";
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import { appRoutes } from "../../../core/constants/routes";
@@ -92,32 +92,44 @@ const ServiceItem = ({
   img,
   bg,
   to,
-}) => (
-  <div
-    className={`${className} max-w-80 border-white border-spacing-x-1 transition hover:scale-105 sm:p-0`}
-    style={{ height: "85vh" }}
-  >
-    <HashLink className="cursor-pointer" to={to}>
-      <div
-        className={`${bg} z-50 w-full bg-no-repeat bg-cover rounded-2xl sm:rounded-t-2xl transition overflow-hidden`}
-        style={{ height: "60vh" }}
+}) => {
+  const navigate = useNavigate();
+  return (
+    <div
+      className={`${className} max-w-80 border-white border-spacing-x-1 transition hover:scale-105 sm:p-0`}
+      style={{ height: "85vh" }}
+    >
+      <button
+        className="cursor-pointer w-full"
+        onClick={() => {
+          navigate(to);
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth", // for a smooth scrolling
+          });
+        }}
       >
-        <img
-          className={`${
-            isImgLoaded ? " opacity-100" : " opacity-0"
-          } bg-story-2 h-full w-full z-10 transition object-cover object-bottom`}
-          onLoad={() => setIsImgLoaded(true)}
-          loading="lazy"
-          alt="services"
-          src={img}
-        />
-      </div>
-    </HashLink>
-    <h1 className="text-white pt-3 text-sm lg:text-base xl:text-xl 2xl:text-2xl tracking-tight font-bold text-center">
-      {title}
-    </h1>
-    <p className="text-white text-xs lg:text-sm 2xl:text-xl tracking-tight text-center">
-      {content}
-    </p>
-  </div>
-);
+        <div
+          className={`${bg} z-50 w-full bg-no-repeat bg-cover rounded-2xl sm:rounded-t-2xl transition overflow-hidden`}
+          style={{ height: "60vh" }}
+        >
+          <img
+            className={`${
+              isImgLoaded ? " opacity-100" : " opacity-0"
+            } bg-story-2 h-full w-full z-10 transition object-cover object-bottom`}
+            onLoad={() => setIsImgLoaded(true)}
+            loading="lazy"
+            alt="services"
+            src={img}
+          />
+        </div>
+      </button>
+      <h1 className="text-white pt-3 text-sm lg:text-base xl:text-xl 2xl:text-2xl tracking-tight font-bold text-center">
+        {title}
+      </h1>
+      <p className="text-white text-xs lg:text-sm 2xl:text-xl tracking-tight text-center">
+        {content}
+      </p>
+    </div>
+  );
+};
