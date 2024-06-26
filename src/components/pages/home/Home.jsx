@@ -11,20 +11,19 @@ const Home = () => {
     <Scaffold>
       <HashLink to="top"></HashLink>
       <TopSection />
-      <div
+      {/* <div
         className={`h-screen bg-white flex flex-col justify-center items-center`}
       >
-        <iframe
-          height={"80%"}
-          width={"80%"}
-          src={`https://www.youtube.com/embed/U6fC4Ij608A`}
-          frameBorder="0"
-          allow="  accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="Embedded youtube"
-        />
-        <p>Your video goes here</p>
-      </div>
+        <div className="w-full h-full overflow-hidden bg-black">
+          <iframe
+            allow="  accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            src={`https://www.youtube.com/embed/U6fC4Ij608A`}
+            className="w-full h-full "
+            title="Embedded youtube"
+            allowFullScreen
+          />
+        </div>
+      </div> */}
       <ServicesSection />
       <ReviewsSection />
     </Scaffold>

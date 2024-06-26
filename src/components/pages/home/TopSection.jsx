@@ -8,7 +8,7 @@ import styles from "./home.module.css";
 export const TopSection = () => {
   const [isMainPicVisible, setIsMainPicVisible] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.7,
+    threshold: 0.6,
   });
 
   return (
@@ -27,7 +27,7 @@ export const TopSection = () => {
       <div
         className={`${
           inView ? styles.show_1 : styles.hide_2
-        } text-white absolute bottom-10 right-0 z-20 pr-5 flex flex-col justify-center`}
+        } text-white absolute bottom-16 right-0 z-20 pr-5 flex flex-col justify-center`}
         ref={ref}
       >
         <h1 className="2xl:text-9xl xl:text-8xl lg:text-6xl sm:text-6xl text-5xl text-end font-medium">

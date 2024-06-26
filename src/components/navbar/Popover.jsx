@@ -1,14 +1,14 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 
-import { appRoutes } from "../../core/constants/routes";
 import { classNameHandler } from "../../logic/navbarItemClassNameHandler";
-import { HashLink } from "react-router-hash-link";
+import { appRoutes } from "../../core/constants/routes";
 
 function MyPopover() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <Popover>
@@ -22,33 +22,51 @@ function MyPopover() {
             anchor="bottom end"
             className="sm:mt-3 text-end w-56 z-50 flex flex-col text-white bg-black rounded-b-xl"
           >
-            <HashLink
+            <button
               className={`${classNameHandler(
                 appRoutes["laser-hair-removal"],
                 location
               )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
-              to={`${appRoutes["laser-hair-removal"]}#top`}
+              onClick={() => {
+                navigate(appRoutes["laser-hair-removal"]);
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth", // for a smooth scrolling
+                });
+              }}
             >
               Laser Hair Removal
-            </HashLink>
-            <HashLink
+            </button>
+            <button
               className={`${classNameHandler(
                 appRoutes["derma-frac"],
                 location
               )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
-              to={`${appRoutes["derma-frac"]}#top`}
+              onClick={() => {
+                navigate(appRoutes["derma-frac"]);
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth", // for a smooth scrolling
+                });
+              }}
             >
               Derma-frac
-            </HashLink>
-            <HashLink
+            </button>
+            <button
               className={`${classNameHandler(
                 appRoutes["hydra-facial"],
                 location
               )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
-              to={`${appRoutes["hydra-facial"]}#top`}
+              onClick={() => {
+                navigate(appRoutes["hydra-facial"]);
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth", // for a smooth scrolling
+                });
+              }}
             >
               Hydrafacial
-            </HashLink>
+            </button>
           </PopoverPanel>
         </>
       )}

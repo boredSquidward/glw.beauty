@@ -1,6 +1,5 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link, useLocation } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import { useState } from "react";
 
@@ -12,6 +11,7 @@ import MyPopover from "./Popover";
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const clickHandler = () => {
     setIsDropdownOpen((prevState) => !prevState);
@@ -21,12 +21,18 @@ function Navbar() {
     <nav className="fixed z-50 bg-black top-0 w-screen border-b border-gray-900">
       <div className="mx-auto w-screen sm:px-15 py-2 sm:px-10 lg:px-8">
         <div className="relative p-4 flex 2xl:h-36 h-20 items-center justify-between">
-          <Link
+          <button
             className="flex flex-shrink-0 items-center"
-            to={appRoutes.homePath}
+            onClick={() => {
+              navigate(appRoutes.homePath);
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth", // for a smooth scrolling
+              });
+            }}
           >
             <img className="2xl:h-28 h-12 w-auto" alt="glw.beauty" src={Logo} />
-          </Link>
+          </button>
           <div className="sm:hidden">
             <Disclosure>
               <Disclosure.Button
@@ -44,19 +50,31 @@ function Navbar() {
           </div>
           <div className="hidden sm:ml-6 sm:flex items-center">
             <div className="flex space-x-4 items-center">
-              <HashLink
-                to={`${appRoutes.homePath}#top`}
+              <button
+                onClick={() => {
+                  navigate(appRoutes.homePath);
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth", // for a smooth scrolling
+                  });
+                }}
                 className={classNameHandler(appRoutes.homePath, location)}
               >
                 HOME
-              </HashLink>
+              </button>
               <MyPopover />
-              <HashLink
-                to={`${appRoutes.aboutUsPath}#top`}
+              <button
+                onClick={() => {
+                  navigate(appRoutes.aboutUsPath);
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth", // for a smooth scrolling
+                  });
+                }}
                 className={classNameHandler(appRoutes.aboutUsPath, location)}
               >
                 ABOUT US
-              </HashLink>
+              </button>
             </div>
           </div>
         </div>
@@ -67,20 +85,31 @@ function Navbar() {
             isDropdownOpen ? "" : "hidden"
           } space-y-1 px-2 pb-3 pt-2`}
         >
-          <Link
-            to={appRoutes.homePath}
+          <button
+            onClick={() => {
+              navigate(appRoutes.homePath);
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth", // for a smooth scrolling
+              });
+            }}
             className={classNameHandler(appRoutes.homePath, location)}
-            aria-current="page"
           >
             HOME
-          </Link>
+          </button>
           <MyPopover />
-          <Link
-            to={appRoutes.aboutUsPath}
+          <button
+            onClick={() => {
+              navigate(appRoutes.aboutUsPath);
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth", // for a smooth scrolling
+              });
+            }}
             className={classNameHandler(appRoutes.aboutUsPath, location)}
           >
             ABOUT US
-          </Link>
+          </button>
         </div>
       </div>
     </nav>

@@ -40,7 +40,7 @@ export const LaserHairRemoval = () => {
               laser hair removal is in high demand.
             </p>
             <Link
-              to="https://book.squareup.com/appointments/zt4ca7luehw7ut/location/LZR19TJKEN977/services/OC266YU2VIN4WLEO627E3S5F"
+              to="https://book.squareup.com/appointments/zt4ca7luehw7ut/location/LZR19TJKEN977/services/"
               target="_blank"
               id="book-now"
             >

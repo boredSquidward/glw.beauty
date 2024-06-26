@@ -1,7 +1,7 @@
 {
   "name": "glw.beauty",
   "version": "0.1.0",
-  "homepage": "https://boredSquidward.github.io/glw.beauty",
+  "homepage": "https://www.glw.beauty",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^2.0.4",

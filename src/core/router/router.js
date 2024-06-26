@@ -1,4 +1,4 @@
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
 
 import { appRoutes } from "../constants/routes.js";
@@ -56,6 +56,6 @@ const routes = [
   // },
 ];
 
-export const router = createHashRouter(routes, {
+export const router = createBrowserRouter(routes, {
   basename: appRoutes.homePath,
 });

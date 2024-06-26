@@ -24,7 +24,11 @@ const Footer = () => {
           </p>
           <div className="text-white text-sm 2xl:text-3xl">
             <span>Phone: </span>
-            <a rel="stylesheet" href="tel:+1 469-724-4444">
+            <a
+              rel="stylesheet"
+              href="tel:+1 469-724-4444"
+              className=" hover:underline-offset-4 hover:underline"
+            >
               +1 469-724-4444
             </a>
           </div>
@@ -66,7 +70,7 @@ const Footer = () => {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6685.446406844138!2d-96.80474900000002!3d33.090066!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c3cdb4ca82cd1%3A0x14431c50aaeba374!2sThe%20Huntington%20Apartments!5e0!3m2!1sen!2suk!4v1714156489557!5m2!1sen!2suk"
           referrerPolicy="no-referrer-when-downgrade"
-          sandbox="allow-scripts allow-same-origin"
+          sandbox="allow-scripts allow-same-origin "
           className="h-full w-full bg-gray-100 sm:w-1/2 min-h-96"
           title="glw_beauty_location"
           allowFullScreen
