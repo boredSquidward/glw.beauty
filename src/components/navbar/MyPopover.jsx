@@ -14,7 +14,7 @@ function MyPopover() {
     <Popover>
       {({ open }) => (
         <>
-          <PopoverButton className="flex items-center text-center gap-2 rounded-md text-gray-300 hover:bg-gray-700 focus:outline-none space-y-1 px-3 py-2 w-full">
+          <PopoverButton className="flex items-center text-center gap-2 rounded-md text-gray-300 text-base xl:text-xl hover:bg-gray-700 focus:outline-none space-y-1 px-3 py-2 w-full">
             SERVICES
             <ChevronDownIcon className={clsx("size-5", open && "rotate-180")} />
           </PopoverButton>

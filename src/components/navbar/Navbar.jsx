@@ -6,7 +6,7 @@ import { useState } from "react";
 import { classNameHandler } from "../../logic/navbarItemClassNameHandler";
 import { appRoutes } from "../../core/constants/routes";
 import Logo from "../../assets/images/logo.png";
-import MyPopover from "./Popover";
+import MyPopover from "./MyPopover";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <nav className="fixed z-50 bg-black top-0 w-screen border-b border-gray-900">
       <div className="mx-auto w-screen sm:px-15 py-2 sm:px-10 lg:px-8">
-        <div className="relative p-4 flex 2xl:h-36 h-20 items-center justify-between">
+        <div className="relative p-4 flex xl:h-22 h-20 items-center justify-between">
           <button
             className="flex flex-shrink-0 items-center"
             onClick={() => {
@@ -31,7 +31,7 @@ function Navbar() {
               });
             }}
           >
-            <img className="2xl:h-28 h-12 w-auto" alt="glw.beauty" src={Logo} />
+            <img className="xl:h-20 h-12 w-auto" alt="glw.beauty" src={Logo} />
           </button>
           <div className="sm:hidden">
             <Disclosure>
