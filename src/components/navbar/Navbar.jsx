@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <nav className="fixed z-50 bg-black top-0 w-screen border-b border-gray-900">
       <div className="mx-auto w-screen sm:px-15 py-2 sm:px-10 lg:px-8">
-        <div className="relative p-4 flex xl:h-22 h-20 items-center justify-between">
+        <div className="relative p-4 flex h-20 items-center justify-between">
           <button
             className="flex flex-shrink-0 items-center"
             onClick={() => {

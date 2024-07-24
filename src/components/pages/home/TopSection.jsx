@@ -30,13 +30,13 @@ export const TopSection = () => {
         } text-white absolute bottom-16 right-0 z-20 pr-5 flex flex-col justify-center`}
         ref={ref}
       >
-        <h1 className="2xl:text-9xl xl:text-8xl lg:text-6xl sm:text-6xl text-5xl text-end font-medium">
+        <h1 className="2xl:text-7xl xl:text-6xl lg:text-6xl sm:text-6xl text-5xl text-end font-bold">
           find your
         </h1>
-        <h2 className="2xl:text-7xl xl:text-4xl lg:text-3xl sm:text-3xl text-xl text-end font-semibold">
+        <h2 className="2xl:text-4xl xl:text-4xl lg:text-3xl sm:text-3xl text-xl text-end font-semibold">
           Best Hair Removal Solution
         </h2>
-        <p className="2xl:mt-4 2xl:text-3xl xl:text-xl xl:text-end sm:text-base text-xs text-end">
+        <p className="2xl:mt-4 2xl:text-2xl xl:text-xl xl:text-end sm:text-base text-xs text-end">
           CLEANSE YOUR SKIN AND REFRESH YOUR BODY
         </p>
         <div className="h-3" />
@@ -45,7 +45,7 @@ export const TopSection = () => {
           target="_blank"
           id="book-now"
         >
-          <div className="flex flex-row justify-center items-center gap-2 py-2 px-4 mt-3 text-center text-black 2xl:text-4xl xl:text-2xl text-base font-bold rounded-full bg-white hover:ring-2 hover:ring-blue-500">
+          <div className="flex flex-row justify-center items-center gap-2 py-2 px-4 mt-3 text-center text-black 2xl:text-3xl xl:text-2xl text-base font-bold rounded-full bg-white hover:ring-2 hover:ring-blue-500">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

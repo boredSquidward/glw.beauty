@@ -9,7 +9,7 @@ import { ReviewsSection } from "./ReviewsSection";
 const Home = () => {
   return (
     <Scaffold>
-      <HashLink to="top"></HashLink>
+      {/* <HashLink to="top"></HashLink> */}
       <TopSection />
       {/* <div
         className={`h-screen bg-white flex flex-col justify-center items-center`}
@@ -24,8 +24,8 @@ const Home = () => {
           />
         </div>
       </div> */}
-      <ServicesSection />
-      <ReviewsSection />
+      {/* <ServicesSection />
+      <ReviewsSection /> */}
     </Scaffold>
   );
 };

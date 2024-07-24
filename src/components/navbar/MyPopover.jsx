@@ -14,7 +14,7 @@ function MyPopover() {
     <Popover>
       {({ open }) => (
         <>
-          <PopoverButton className="flex items-center text-center gap-2 rounded-md text-gray-300 text-base xl:text-xl hover:bg-gray-700 focus:outline-none space-y-1 px-3 py-2 w-full">
+          <PopoverButton className="flex items-center text-center gap-2 rounded-md text-gray-300 text-sm xl:text-sm hover:bg-gray-700 focus:outline-none space-y-1 px-3 py-2 w-full">
             SERVICES
             <ChevronDownIcon className={clsx("size-5", open && "rotate-180")} />
           </PopoverButton>
@@ -26,7 +26,7 @@ function MyPopover() {
               className={`${classNameHandler(
                 appRoutes["laser-hair-removal"],
                 location
-              )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
+              )} sm:m-2 mt-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
               onClick={() => {
                 navigate(appRoutes["laser-hair-removal"]);
                 window.scrollTo({
@@ -41,7 +41,7 @@ function MyPopover() {
               className={`${classNameHandler(
                 appRoutes["derma-frac"],
                 location
-              )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
+              )} sm:m-2 mt-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
               onClick={() => {
                 navigate(appRoutes["derma-frac"]);
                 window.scrollTo({
@@ -56,7 +56,7 @@ function MyPopover() {
               className={`${classNameHandler(
                 appRoutes["hydra-facial"],
                 location
-              )} m-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
+              )} sm:m-2 my-2 p-2 text-gray-300 hover:bg-gray-700 rounded-md`}
               onClick={() => {
                 navigate(appRoutes["hydra-facial"]);
                 window.scrollTo({
