@@ -1,8 +1,9 @@
 import React from "react";
 
 import Logo from "../../assets/images/logo.png";
-import Instagram from "../../assets/icons/logo-instagram.svg";
-import Facebook from "../../assets/icons/logo-facebook.svg";
+import Instagram from "../../assets/icons/instagram-svg.svg";
+import Facebook from "../../assets/icons/facebook-svg.svg";
+import Telegram from "../../assets/icons/telegram-svgrepo-com.svg";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -32,8 +33,8 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-xs xl:text-sm">glistenwellness@gmail.com</p>
-        <div className="flex flex-row mt-6 2xl:mt-10 w-20 xl:w-28 justify-between">
-          <div className="flex justify-center items-center bg-white rounded-full w-7 h-7 xl:w-10 xl:h-10">
+        <div className="flex flex-row mt-6 2xl:mt-10 justify-between">
+          <div className="flex justify-center items-center bg-white w-7 h-7 xl:w-10 xl:h-10">
             <a
               href="https://www.instagram.com/glw.beautty"
               rel="noreferrer"
@@ -42,12 +43,26 @@ const Footer = () => {
               <img
                 src={Instagram}
                 alt="instagram"
-                className="w-6 h-6 xl:h-9 xl:w-9"
+                className="w-7 h-7 xl:w-10 xl:h-10"
                 loading="lazy"
               />
             </a>
           </div>
-          <div className="flex justify-center items-center bg-white rounded-full w-7 h-7 xl:w-10 xl:h-10">
+          <div className="flex justify-center items-center bg-white w-7 h-7 xl:w-10 xl:h-10">
+            <a
+              href="https://t.me/glwbeauty"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                src={Telegram}
+                alt="telegram"
+                loading="lazy"
+                className="w-7 h-7 xl:h-10 xl:w-10"
+              />
+            </a>
+          </div>
+          <div className="flex justify-center items-center bg-white w-7 h-7 xl:w-10 xl:h-10">
             <a
               href="https://www.facebook.com/glw.beautty"
               rel="noreferrer"
@@ -57,12 +72,12 @@ const Footer = () => {
                 src={Facebook}
                 alt="facebook"
                 loading="lazy"
-                className="w-6 h-6 xl:h-10 xl:w-10"
+                className="w-7 h-7 xl:h-10 xl:w-10"
               />
             </a>
           </div>
         </div>
-        <div className="pt-10 xl:pt-10 text-xs xl:text-sm text-center">
+        <div className="p-3 text-xs xl:text-sm text-center">
           © Copyright 2012 - {year} | Glisten Wellness | All Rights Reserved
         </div>
       </div>

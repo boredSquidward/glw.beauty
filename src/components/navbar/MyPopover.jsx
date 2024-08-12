@@ -31,7 +31,7 @@ function MyPopover() {
                 navigate(appRoutes["laser-hair-removal"]);
                 window.scrollTo({
                   top: 0,
-                  behavior: "smooth", // for a smooth scrolling
+                  behavior: "smooth",
                 });
               }}
             >
@@ -46,7 +46,7 @@ function MyPopover() {
                 navigate(appRoutes["derma-frac"]);
                 window.scrollTo({
                   top: 0,
-                  behavior: "smooth", // for a smooth scrolling
+                  behavior: "smooth",
                 });
               }}
             >
@@ -61,7 +61,7 @@ function MyPopover() {
                 navigate(appRoutes["hydra-facial"]);
                 window.scrollTo({
                   top: 0,
-                  behavior: "smooth", // for a smooth scrolling
+                  behavior: "smooth",
                 });
               }}
             >

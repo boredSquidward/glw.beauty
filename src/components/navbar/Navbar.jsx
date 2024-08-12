@@ -20,18 +20,18 @@ function Navbar() {
   return (
     <nav className="fixed z-50 bg-black top-0 w-screen border-b border-gray-900">
       <div className="mx-auto w-screen sm:px-15 py-2 sm:px-10 lg:px-8">
-        <div className="relative p-4 flex h-20 items-center justify-between">
+        <div className="relative p-4 flex h-20 xl:h-14 items-center justify-between">
           <button
             className="flex flex-shrink-0 items-center"
             onClick={() => {
               navigate(appRoutes.homePath);
               window.scrollTo({
                 top: 0,
-                behavior: "smooth", // for a smooth scrolling
+                behavior: "smooth",
               });
             }}
           >
-            <img className="xl:h-20 h-12 w-auto" alt="glw.beauty" src={Logo} />
+            <img className="h-12 xl:h-14 w-auto" alt="glw.beauty" src={Logo} />
           </button>
           <div className="sm:hidden">
             <Disclosure>
@@ -55,7 +55,7 @@ function Navbar() {
                   navigate(appRoutes.homePath);
                   window.scrollTo({
                     top: 0,
-                    behavior: "smooth", // for a smooth scrolling
+                    behavior: "smooth",
                   });
                 }}
                 className={classNameHandler(appRoutes.homePath, location)}
@@ -68,7 +68,7 @@ function Navbar() {
                   navigate(appRoutes.aboutUsPath);
                   window.scrollTo({
                     top: 0,
-                    behavior: "smooth", // for a smooth scrolling
+                    behavior: "smooth",
                   });
                 }}
                 className={classNameHandler(appRoutes.aboutUsPath, location)}
@@ -81,9 +81,8 @@ function Navbar() {
       </div>
       <div className={`sm:hidden`} id="mobile-menu">
         <div
-          className={`${
-            isDropdownOpen ? "" : "hidden"
-          } space-y-1 px-2 pb-3 pt-2`}
+          className={`${isDropdownOpen ? "" : "hidden"
+            } space-y-1 px-2 pb-3 pt-2`}
         >
           <button
             onClick={() => {

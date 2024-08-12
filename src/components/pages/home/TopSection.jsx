@@ -8,26 +8,27 @@ import styles from "./home.module.css";
 export const TopSection = () => {
   const [isMainPicVisible, setIsMainPicVisible] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.6,
+    threshold: 0.9,
   });
 
   return (
     <div
       className={`${styles.first_section} relative h-screen overflow-hidden bg-main-photo bg-no-repeat bg-cover`}
     >
-      <img
-        className={`${
-          isMainPicVisible ? " opacity-100" : " opacity-0"
-        } h-full mt-24 right-0 z-10 w-full object-cover transition-opacity`}
-        onLoad={() => setIsMainPicVisible(true)}
-        loading="eager"
-        alt="main-pic"
-        src={MainPic}
-      />
+      <div className="h-full xl:h-auto mt-24 xl:mt-0">
+        <img
+          className={`${isMainPicVisible ? " opacity-100" : " opacity-0"
+            } h-full right-0 z-10 w-full object-cover transition-opacity`}
+          onLoad={() => setIsMainPicVisible(true)}
+          loading="eager"
+          alt="main-pic"
+          src={MainPic}
+        />
+
+      </div>
       <div
-        className={`${
-          inView ? styles.show_1 : styles.hide_2
-        } text-white absolute bottom-16 right-0 z-20 pr-5 flex flex-col justify-center`}
+        className={`${inView ? styles.show_1 : styles.hide_2
+          } text-white absolute bottom-16 right-0 z-20 pr-5 flex flex-col justify-center`}
         ref={ref}
       >
         <h1 className="2xl:text-7xl xl:text-6xl lg:text-6xl sm:text-6xl text-5xl text-end font-bold">

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Image } from "react-bootstrap";
 
 import Shimmer from "./Shimmer";
 import { LAZY, URL } from "../../core/constants/keywords";

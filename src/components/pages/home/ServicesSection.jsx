@@ -13,27 +13,28 @@ export const ServicesSection = () => {
   const [isFacialLoaded, setIsFacialLoaded] = useState(false);
   const [isDermaLoaded, setIsDermaLoaded] = useState(false);
 
+  const navigate = useNavigate();
+
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.08,
   });
 
   return (
-    <div className="sm:min-h-screen bg-black flex flex-col justify-around">
+    <div style={{ minHeight: '110vh' }} className="bg-black flex flex-col justify-center">
       <div
-        className="m-3 mx-auto flex flex-col justify-center items-center"
-        style={{ height: "10vh" }}
+        className="mx-auto mt-2 flex flex-col justify-start items-center"
+        style={{ height: "12vh" }}
       >
         <p className="text-sm xl:text-base 2xl:text-xl leading-8 text-white">
           WHY THEY HAVE TO REGISTER?
         </p>
-        <h1 className="text-3xl xl:text-4xl 2xl:text-5xl font-bold tracking-tight text-white">
+        <h1 className="text-3xl xl:text-4xl font-bold tracking-tight text-white">
           Our Special Services
         </h1>
       </div>
       <div
-        className={`${
-          inView ? styles.show_1 : styles.hide_1
-        } px-3 flex justify-center`}
+        className={`${inView ? styles.show_1 : styles.hide_1
+          } p-3 flex justify-center`}
         ref={ref}
       >
         <div className="flex flex-col md:flex-row justify-around">
@@ -42,6 +43,7 @@ export const ServicesSection = () => {
             setIsImgLoaded={setIsLaserRemovalLoaded}
             isImgLoaded={isLaserRemovalLoaded}
             title={"Laser Hair Removal"}
+            navigate={navigate}
             bg={"bg-story-6"}
             img={HairReduction}
             content={`Laser hair removal offers a long-lasting solution by targeting hair
@@ -56,6 +58,7 @@ export const ServicesSection = () => {
             setIsImgLoaded={setIsDermaLoaded}
             isImgLoaded={isDermaLoaded}
             className={"md:mx-5"}
+            navigate={navigate}
             bg={"bg-story-3"}
             img={SkinCare}
             content={`Dermafrac Micro-channeling or micro-needling, is an advanced
@@ -69,6 +72,7 @@ export const ServicesSection = () => {
             setIsImgLoaded={setIsFacialLoaded}
             isImgLoaded={isFacialLoaded}
             title={"Hydra-Facial"}
+            navigate={navigate}
             bg={"bg-story-2"}
             img={Hydra}
             content={`Achieve radiant skin with advanced facial treatments. Hydrafacial,
@@ -87,17 +91,18 @@ const ServiceItem = ({
   setIsImgLoaded,
   isImgLoaded,
   className,
+  navigate,
   content,
   title,
   img,
   bg,
   to,
 }) => {
-  const navigate = useNavigate();
+
   return (
     <div
       className={`${className} max-w-80 border-white border-spacing-x-1 transition hover:scale-105 sm:p-0`}
-      style={{ height: "85vh" }}
+      style={{ height: "88vh" }}
     >
       <button
         className="cursor-pointer w-full"
@@ -114,9 +119,8 @@ const ServiceItem = ({
           style={{ height: "60vh" }}
         >
           <img
-            className={`${
-              isImgLoaded ? " opacity-100" : " opacity-0"
-            } bg-story-2 h-full w-full z-10 transition object-cover object-bottom`}
+            className={`${isImgLoaded ? " opacity-100" : " opacity-0"
+              } bg-story-2 h-full w-full z-10 transition object-cover object-bottom`}
             onLoad={() => setIsImgLoaded(true)}
             loading="lazy"
             alt="services"
@@ -124,10 +128,10 @@ const ServiceItem = ({
           />
         </div>
       </button>
-      <h1 className="text-white pt-3 text-sm lg:text-base xl:text-xl 2xl:text-2xl tracking-tight font-bold text-center">
+      <h1 className="text-white pt-3 xl:pb-5 text-sm xl:text-xl tracking-tight font-bold text-center">
         {title}
       </h1>
-      <p className="text-white text-xs lg:text-sm 2xl:text-xl tracking-tight text-center">
+      <p className="text-white text-xs xl:text-sm tracking-tight text-center">
         {content}
       </p>
     </div>
